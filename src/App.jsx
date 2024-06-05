@@ -19,7 +19,9 @@ const Layout = () => {
 function App() {
 
   return (
-    <Layout />
+    <>
+      <Layout />
+    </>
   )
 }
 
