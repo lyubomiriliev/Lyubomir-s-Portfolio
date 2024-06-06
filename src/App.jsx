@@ -8,12 +8,23 @@ import TechStack from "./components/TechStack"
 const Layout = () => {
   return (
     <div>
+      <div id="top"></div>
       <Header />
-      <Hero />
-      <TechStack />
-      <AboutMe />
-      <Projects />
-      <Contacts />
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="tech-stack">
+        <TechStack />
+      </div>
+      <div id="about">
+        <AboutMe />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contacts />
+      </div>
     </div>
   )
 }

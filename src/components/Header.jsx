@@ -1,19 +1,36 @@
 import React from 'react'
 import { lyuboLogo } from '../assets/logos'
+import { Link } from 'react-scroll'
 
 const Header = () => {
     return (
-        <div className='max-w-screen-xl mx-auto mt-5 px-4 md:px-0'>
-            <div className='w-full flex items-center justify-between py-2 md:py-0 flex-col md:flex-row'>
+        <div className='w-full flex flex-col md:flex-row h-26 md:h-28 bg-white sticky top-0 z-50'>
+            <div className='w-2/3 mx-auto flex items-center justify-between py-2 md:py-0 flex-col md:flex-row'>
                 <div>
                     <img className='w-52 md:w-60' src={lyuboLogo} alt="Logo" />
                 </div>
-                <div className='mt-10 md:mt-0'>
+                <div className='mt-5 md:mt-0'>
                     <ul className='flex space-x-6 md:space-x-8 font-outfit font-light text-primary uppercase text-xl'>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
+                        <li>
+                            <Link to="top" smooth={true} duration={500}>
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="about" smooth={true} duration={500}>
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="projects" smooth={true} duration={500}>
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="contact" smooth={true} duration={500}>
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

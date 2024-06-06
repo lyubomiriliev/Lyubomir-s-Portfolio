@@ -14,6 +14,7 @@ import firebaseLogo from "../logos/firebase.png";
 import lines from "../logos/lines.svg";
 import diagonalLines from "../logos/diagonalLines.svg";
 import triangles from "../logos/triangles.svg";
+import aboutImage from "../logos/about1.png";
 
 export {
   lyuboLogo,
@@ -24,6 +25,7 @@ export {
   lines,
   diagonalLines,
   triangles,
+  aboutImage,
 };
 
 export const techStackLogos = [
