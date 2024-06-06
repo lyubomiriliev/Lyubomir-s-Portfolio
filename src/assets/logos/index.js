@@ -15,6 +15,8 @@ import lines from "../logos/lines.svg";
 import diagonalLines from "../logos/diagonalLines.svg";
 import triangles from "../logos/triangles.svg";
 import aboutImage from "../logos/about1.png";
+import blackSea from "../logos/blackSea.png";
+import splashLogo from "../logos/splash.png";
 
 export {
   lyuboLogo,
@@ -26,6 +28,8 @@ export {
   diagonalLines,
   triangles,
   aboutImage,
+  blackSea,
+  splashLogo,
 };
 
 export const techStackLogos = [
