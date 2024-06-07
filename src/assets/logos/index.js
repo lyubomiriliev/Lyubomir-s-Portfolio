@@ -17,6 +17,11 @@ import triangles from "../logos/triangles.svg";
 import aboutImage from "../logos/about1.png";
 import blackSea from "../logos/blackSea.png";
 import splashLogo from "../logos/splash.png";
+import bsemImg from "../logos/bsemImg.jpg";
+import nextImg from "../logos/nextImg.jpg";
+import popshotImg from "../logos/popshotImg.jpg";
+import nextLogo from "../logos/nextLogoPNG.png";
+import popShotLogo from "../logos/popshotLogo.png";
 
 export {
   lyuboLogo,
@@ -30,6 +35,11 @@ export {
   aboutImage,
   blackSea,
   splashLogo,
+  bsemImg,
+  popshotImg,
+  nextImg,
+  nextLogo,
+  popShotLogo,
 };
 
 export const techStackLogos = [
