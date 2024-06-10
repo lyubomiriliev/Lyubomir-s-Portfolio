@@ -17,25 +17,37 @@ const Projects = () => {
             </div>
 
 
-            <div className='w-full md:max-w-screen-xl mx-auto items-center flex py-10'>
+            <div className='w-full md:max-w-screen-xl mx-auto items-center gap-10 flex flex-col py-10'>
                 <Project
                     logoSrc={blackSea}
                     title="BlackSea Electromobility"
                     description="Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris eget mi eget. Dui facilisis nunc porttitor turpis dui pharetra eget mauris laoreet."
                     imgSrc={bsemImg}
+                    primaryButtonlabel="Website"
+                    secondaryButtonLabel="Source Code"
+                    testAccEmail="test@gmail.com"
+                    testAccPw="test123"
                 />
-                {/* <Project
+                <Project
                     logoSrc={nextLogo}
-                    title="Next E-commerce"
+                    title="Next E-Commerce"
                     description="Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris eget mi eget. Dui facilisis nunc porttitor turpis dui pharetra eget mauris laoreet."
                     imgSrc={nextImg}
+                    primaryButtonlabel="Live Demo"
+                    secondaryButtonLabel="Source Code"
+                    testAccEmail="test@gmail.com"
+                    testAccPw="test123"
                 />
                 <Project
                     logoSrc={popShotLogo}
                     title="Popshot Social Media"
                     description="Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris eget mi eget. Dui facilisis nunc porttitor turpis dui pharetra eget mauris laoreet."
                     imgSrc={popshotImg}
-                /> */}
+                    primaryButtonlabel="Live Demo"
+                    secondaryButtonLabel="Source Code"
+                    testAccEmail="test@gmail.com"
+                    testAccPw="test123"
+                />
             </div>
         </div>
     )
