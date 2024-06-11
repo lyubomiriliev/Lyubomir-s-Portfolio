@@ -5,28 +5,23 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Projects from "./components/Projects"
 import TechStack from "./components/TechStack"
-import { Events, scrollSpy } from "react-scroll"
+import Footer from "./components/Footer"
 
-const Layout = () => {
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-  const [activeSession, setActiveSession] = useState("top");
+const Layout = ({ initialSection }) => {
 
-  useEffect(() => {
-    Events.scrollEvent.register("begin", function (to) {
-      setActiveSession(to);
-    });
+  const [activeSession, setActiveSession] = useState("home");
 
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove("begin");
-    };
-  }, []);
+  const handleSectionClick = (section) => {
+    setActiveSession(section);
+    window.history.pushState(null, null, `/${section}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const sections = ["top", "about", "projects", "contact"];
+      const sections = ["home", "about", "projects", "contact"];
       const sectionOffsets = sections.map((section) => ({
         id: section,
         offset: document.getElementById(section).offsetTop,
@@ -34,26 +29,36 @@ const Layout = () => {
 
       const activeSection = sectionOffsets.find((section) => scrollPosition >= section.offset && scrollPosition < section.offset + window.innerHeight);
 
-      if (activeSection) {
+      if (activeSection && activeSection.id !== activeSession) {
         setActiveSession(activeSection.id);
+        window.history.pushState(null, null, `/${activeSection.id}`);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  }, [])
+  }, [activeSession])
+
+  useEffect(() => {
+    const section = initialSection || window.location.pathname.replace("/", "") || "home";
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      const sectionOffset = sectionElement.offsetTop;
+      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
+      setActiveSession(section);
+    }
+  }, [initialSection])
 
   return (
     <div>
-      <div id="top"></div>
-      <Header activeSession={activeSession} />
-      <div id="hero">
+      <div id="home"></div>
+      <Header activeSession={activeSession} onSectionClick={handleSectionClick} />
+      <div >
         <Hero />
       </div>
-      <div id="tech-stack">
+      <div>
         <TechStack />
       </div>
       <div id="about">
@@ -65,17 +70,42 @@ const Layout = () => {
       <div id="contact">
         <Contacts />
       </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }
 
 function App() {
 
-  return (
-    <>
-      <Layout />
-    </>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout initialSection="home" />,
+      children: [
+        {
+          path: "/about",
+          element: <Layout initialSection="about" />
+        },
+        {
+          path: "/projects",
+          element: <Layout initialSection="projects" />
+        },
+        {
+          path: "/contact",
+          element: <Layout initialSection="contact" />
+        },
+        {
+          path: "/home",
+          element: <Layout initialSection="home" />
+        },
+      ]
+    }
+  ])
+
+  return <RouterProvider router={router} />
+
 }
 
 export default App

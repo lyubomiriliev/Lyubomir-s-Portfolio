@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { blackSea, bsemImg, diagonalLines, nextImg, nextLogo, popShotLogo, popshotImg, splashLogo } from '../assets/logos'
+import { blackSea, bsemImg, nextImg, nextLogo, popShotLogo, popshotImg, splashLogo } from '../assets/logos'
 import Project from './Project'
 
 
 const Projects = () => {
     return (
-        <div className='w-full relative py-10'>
+        <div className='w-full py-10 relative'>
             <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between'>
                 <div className='w-2/3 md:w-1/2 h-full  md:-ml-32 flex flex-col justify-center items-center relative'>
                     <div className='w-full items-center flex justify-center mt-10 md:ml-10'>
@@ -27,6 +27,8 @@ const Projects = () => {
                     secondaryButtonLabel="Source Code"
                     testAccEmail="test@gmail.com"
                     testAccPw="test123"
+                    webLink="https://app.bse-mobility.eu/"
+                    sourceCode="https://github.com/lyubomiriliev/BlackSea-electromobility"
                 />
                 <Project
                     logoSrc={nextLogo}
@@ -37,6 +39,8 @@ const Projects = () => {
                     secondaryButtonLabel="Source Code"
                     testAccEmail="test@gmail.com"
                     testAccPw="test123"
+                    webLink="https://app.bse-mobility.eu/"
+                    sourceCode="https://github.com/lyubomiriliev/N3XT-E-commerce-Website"
                 />
                 <Project
                     logoSrc={popShotLogo}
@@ -47,6 +51,8 @@ const Projects = () => {
                     secondaryButtonLabel="Source Code"
                     testAccEmail="test@gmail.com"
                     testAccPw="test123"
+                    webLink="https://pop-shot-social-media-website.web.app/"
+                    sourceCode="https://github.com/lyubomiriliev/PopShot-Social-Media-SOFTUNI-2023-"
                 />
             </div>
         </div>

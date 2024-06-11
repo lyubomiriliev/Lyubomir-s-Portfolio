@@ -1,8 +1,9 @@
 import React from 'react'
 import { githubSecondary } from '../assets/logos'
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, secondaryButtonLabel, testAccEmail, testAccPw }) => {
+const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, secondaryButtonLabel, testAccEmail, testAccPw, webLink, sourceCode }) => {
     return (
         <div className='w-full  flex flex-col md:flex-row'>
             <div className='w-full flex flex-col justify-center items-center py-6'>
@@ -25,15 +26,19 @@ const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, seco
                     <img className='w-2/3 mx-auto md:mt-20' src={imgSrc} alt="" />
                 </div>
                 <div className='w-full md:w-2/3 mt-4 flex flex-col justify-between md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center'>
-                    <div className='flex items-center gap-2'>
-                        <span className='font-outfit font-bold text-xl text-primary'>{primaryButtonlabel}</span>
-                        <FaExternalLinkAlt className='scale-110 text-primary' />
-                    </div>
-                    <div className='flex items-center gap-2'>
-                        <span className='font-outfit font-bold text-xl text-secondary'>{secondaryButtonLabel}</span>
-                        <img className='w-8 md:w-10' src={githubSecondary} alt="githubLogo" />
+                    <Link to={webLink} target="_blank" rel="noopener noreferrer">
+                        <div className='flex items-center gap-2'>
+                            <span className='font-outfit font-bold text-xl text-primary'>{primaryButtonlabel}</span>
+                            <FaExternalLinkAlt className='scale-110 text-primary' />
+                        </div>
+                    </Link>
+                    <Link to={sourceCode} target="_blank" rel="noopener noreferrer">
+                        <div className='flex items-center gap-2'>
+                            <span className='font-outfit font-bold text-xl text-secondary'>{secondaryButtonLabel}</span>
+                            <img className='w-8 md:w-10' src={githubSecondary} alt="githubLogo" />
 
-                    </div>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

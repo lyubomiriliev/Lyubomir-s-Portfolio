@@ -22,6 +22,8 @@ import nextImg from "../logos/nextImg.jpg";
 import popshotImg from "../logos/popshotImg.jpg";
 import nextLogo from "../logos/nextLogoPNG.png";
 import popShotLogo from "../logos/popshotLogo.png";
+import lyuboLogoWhite from "../logos/lyuboLogoWhite.png";
+import aboutArrow from "../logos/aboutArrow.svg";
 
 export {
   lyuboLogo,
@@ -40,6 +42,8 @@ export {
   nextImg,
   nextLogo,
   popShotLogo,
+  lyuboLogoWhite,
+  aboutArrow,
 };
 
 export const techStackLogos = [

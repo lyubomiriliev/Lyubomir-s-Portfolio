@@ -1,5 +1,5 @@
 import React from 'react'
-import { aboutImage, diagonalLines, splashLogo, triangles } from '../assets/logos'
+import { aboutArrow, aboutImage, diagonalLines, splashLogo, triangles } from '../assets/logos'
 
 const AboutMe = () => {
     return (
@@ -16,10 +16,13 @@ const AboutMe = () => {
                     <div className='w-full items-center flex justify-center mt-10 md:ml-10'>
                         <h2 className='w-2/3 md:w-[30%] md:mr-5  justify-center flex text-white font-outfit font-bold text-4xl mb-5'>About Me:</h2>
                         <img className='absolute -z-20 w-60 mb-4 ml-3 md:ml-0' src={splashLogo} alt="splash" />
+
                     </div>
                     <p className='w-full md:w-2/5 text-center md:text-right font-outfit font-light mt-16'>Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris eget mi eget. Dui facilisis nunc porttitor turpis dui pharetra eget mauris laoreet.Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris eget mi eget.</p>
                 </div>
             </div>
+            <img className='w-[28%] absolute top-28 right-[37%] mt-10 mr-8 text-secondary hidden md:flex' src={aboutArrow} alt="" />
+
         </div>
     )
 }
