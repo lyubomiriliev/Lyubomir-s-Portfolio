@@ -11,7 +11,7 @@ const Projects = () => {
                 <div className='w-2/3 md:w-1/2 h-full  md:-ml-32 flex flex-col justify-center items-center relative'>
                     <div className='w-full items-center flex justify-center mt-10 md:ml-10'>
                         <h2 className='md:w-[30%] z-10 justify-center flex text-white font-outfit font-bold text-4xl mb-3 -ml-4'>Projects</h2>
-                        <img className='absolute w-60' src={splashLogo} alt="splash" />
+                        <img className='absolute w-64' src={splashLogo} alt="splash" />
                     </div>
                 </div>
             </div>

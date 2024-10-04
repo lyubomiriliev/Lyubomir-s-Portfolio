@@ -5,8 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, secondaryButtonLabel, testAccEmail, testAccPw, webLink, sourceCode }) => {
     return (
-        <div className='w-full  flex flex-col md:flex-row'>
-            <div className='w-full flex flex-col justify-center items-center py-6'>
+        <div className='w-full flex h-[660px] space-x-6 bg-gray-100 px-4 py-4 rounded-xl'>
+            <div className='w-1/2 justify-center items-center h-full bg-gray-300 rounded-xl'>
+                <div className='h-1/2 bg-white w-[90%] mx-auto my-8 rounded-xl'>
+                    <div className='flex w-full justify-end items-center'>
+                        <img src={logoSrc} className='w-16 mx-2 my-2' alt="Project Logo" />
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className='w-full flex flex-col justify-center items-center py-6 '>
                 <div className='w-full flex flex-col md:flex-row items-center justify-center md:items-start md:justify-end md:mr-10 md:space-x-4 '>
                     <img className='w-16 mb-4 md:mb-0 md:mr-4' src={logoSrc} alt="Project logo" />
                     <h2 className='text-secondary font-outfit font-bold text-xl md:text-3xl mb-2'>{title}</h2>
@@ -21,7 +29,7 @@ const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, seco
                     <p className='font-outfit text-secondary'>Password: {testAccPw}</p>
                 </div>
             </div>
-            <div className='w-full flex flex-col items-center'>
+            <div className='w-full flex flex-col items-center '>
                 <div className='w-full'>
                     <img className='w-2/3 mx-auto md:mt-20' src={imgSrc} alt="" />
                 </div>
@@ -40,7 +48,7 @@ const Project = ({ logoSrc, title, description, imgSrc, primaryButtonlabel, seco
                         </div>
                     </Link>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
