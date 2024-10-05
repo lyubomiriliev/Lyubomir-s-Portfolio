@@ -34,6 +34,13 @@ import projectBG from "/projectBG.png"
 import figma from "/figma.png"
 import framerMotion from "/framerMotion.png"
 import heroBlur from "/heroBlur.png"
+import discoveryLogo from "../logos/discoveryLogo.png"
+import hilinkLogo from "../logos/hilink-logo.svg"
+import virtuosoLogo from "../logos/virtuosoLogo.svg"
+import virtuosoLogoIcon from "../logos/virtuosoLogoIcon.svg"
+import discoveryImg from "../logos/discoveryImg.jpg"
+import virtuosoImg from "../logos/virtuosoImg.jpg"
+import hilinkImg from "../logos/hilinkImg.jpg"
 
 export {
   lyuboLogo,
@@ -64,6 +71,13 @@ export {
   figma,
   framerMotion,
   heroBlur,
+  discoveryLogo,
+  hilinkLogo,
+  virtuosoLogo,
+  virtuosoLogoIcon,
+  discoveryImg,
+  virtuosoImg,
+  hilinkImg,
 };
 
 export const techStackLogos = [

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { heroBlur, lyuboLogo, splashLogo } from '../assets/logos'
 
 import { CiLocationOn } from "react-icons/ci";
@@ -9,14 +10,22 @@ import { Field, Label, Switch } from '@headlessui/react'
 
 const Contacts = () => {
 
+	const scrolltoTop = () => {
+        scroll.scrollToTop({ smooth: true });
+    }
+
+	
 
     return (
         <div className='w-full mx-auto flex flex-col justify-center items-center'>
 			{/* CONTACT HEADER */}
- 			<div className='w-full items-center flex justify-center'>
-                <h2 className='w-2/3 md:w-[30%] md:mr-5 mr-2 justify-center flex text-white font-outfit font-bold text-4xl mb-5'>Contact</h2>
-                <img className='absolute -z-20 w-60 mb-4 ml-3 md:ml-0' src={splashLogo} alt="splash" />
-            </div>
+			<div className='w-full md:w-2/3 flex flex-col justify-center items-center'>
+                    <div className='w-full items-center flex justify-center gap-6 '>
+                        <span className='font-outfit font-light text-4xl md:text-5xl text-primary'>#03</span>
+                        <div className='w-[3px] h-[36px] bg-primary'></div>
+                        <h2 className='text-primary font-outfit font-bold text-4xl md:text-5xl uppercase'>Contact Me</h2>
+                    </div>
+                </div>
 			{/* LEFT COLUMN */}
             <div className='max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row'>
                 <div className='flex-1 flex flex-col justify-center relative overflow-hidden md:rounded-tl-2xl md:rounded-bl-2xl'
@@ -43,7 +52,11 @@ const Contacts = () => {
 							<MdOutlineEmail className='scale-150' />
 							<span>iliev.lyubomir98@gmail.com</span>
 						</div>
-						<img className='w-52 md:w-60 -ml-1' src={lyuboLogo} alt="Logo" />
+						<div className='z-50 cursor-pointer' onClick={scrolltoTop}>
+							<ScrollLink to="home" smooth={true} duration={400}>
+								<img className='w-52 md:w-60 -ml-1' src={lyuboLogo} alt="Logo" />
+                            </ScrollLink>
+						</div>
 					</div>
 
                 </div>
