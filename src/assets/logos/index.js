@@ -30,7 +30,10 @@ import lyuboLogoWhite from "../logos/lyuboLogoWhite.png";
 import aboutArrow from "../logos/aboutArrow.svg";
 import heroBG from "../logos/heroBG.png"
 import heroBG2 from "../logos/heroBG2.png"
-
+import projectBG from "/projectBG.png"
+import figma from "/figma.png"
+import framerMotion from "/framerMotion.png"
+import heroBlur from "/heroBlur.png"
 
 export {
   lyuboLogo,
@@ -57,6 +60,10 @@ export {
   aboutArrow,
   heroBG,
   heroBG2,
+  projectBG,
+  figma,
+  framerMotion,
+  heroBlur,
 };
 
 export const techStackLogos = [
@@ -69,4 +76,6 @@ export const techStackLogos = [
   sassLogo,
   tailwindLogo,
   firebaseLogo,
+  framerMotion,
+  figma,
 ];

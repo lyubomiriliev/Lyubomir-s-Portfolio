@@ -15,23 +15,34 @@ const Layout = ({ initialSection }) => {
 
   const handleSectionClick = (section) => {
     setActiveSession(section);
-    window.history.pushState(null, null, `/${section}`);
+    const sectionElement = document.getElementById(section);
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0
+
+    if(sectionElement) {
+      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
+      window.scrollTo({ top: sectionOffset, behavior: "smooth"})
+    }
+    window.history.replaceState(null, null, `/${section}`);
   };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
       const sections = ["home", "about", "projects", "contact"];
       const sectionOffsets = sections.map((section) => ({
         id: section,
-        offset: document.getElementById(section).offsetTop,
+        offset: document.getElementById(section).offsetTop - headerHeight - 20,
       }))
 
-      const activeSection = sectionOffsets.find((section) => scrollPosition >= section.offset && scrollPosition < section.offset + window.innerHeight);
+      const activeSection = sectionOffsets.find((section, index) => {
+        const nextSection = sectionOffsets[index + 1];
+        return scrollPosition >= section.offset && (!nextSection || scrollPosition < nextSection.offset);
+      });
 
       if (activeSection && activeSection.id !== activeSession) {
         setActiveSession(activeSection.id);
-        window.history.pushState(null, null, `/${activeSection.id}`);
+        window.history.replaceState(null, null, `/${activeSection.id}`);
       }
     };
 
@@ -44,8 +55,9 @@ const Layout = ({ initialSection }) => {
   useEffect(() => {
     const section = initialSection || window.location.pathname.replace("/", "") || "home";
     const sectionElement = document.getElementById(section);
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
     if (sectionElement) {
-      const sectionOffset = sectionElement.offsetTop;
+      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
       window.scrollTo({ top: sectionOffset, behavior: "smooth" });
       setActiveSession(section);
     }

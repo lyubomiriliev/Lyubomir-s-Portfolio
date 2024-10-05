@@ -11,10 +11,10 @@ const AboutMe = () => {
                 </div>
                 <div className='w-2/3 md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-center items-center relative'>
                     <div>
-                        <img className='w-[20%] absolute -top-24 right-14' src={triangles} alt="triangles decoration" />
+                        <img className='w-[20%] absolute -top-6 -right-24 md:-top-24 md:right-14' src={triangles} alt="triangles decoration" />
                     </div>
                     <div className='w-full items-center flex justify-center mt-10 md:ml-10'>
-                        <h2 className='w-2/3 md:w-[30%] md:mr-5  justify-center flex text-white font-outfit font-bold text-4xl mb-5'>About Me:</h2>
+                        <h2 className='w-2/3 md:w-[30%] md:mr-5  justify-center flex text-white font-outfit font-bold text-4xl mb-5'>About Me</h2>
                         <img className='absolute -z-20 w-60 mb-4 ml-3 md:ml-0' src={splashLogo} alt="splash" />
 
                     </div>
