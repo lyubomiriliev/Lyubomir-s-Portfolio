@@ -1,5 +1,7 @@
 import React from 'react'
-import { githubSecondary, heroBlur, heroImagePNG2, heroTitle, linkedinSecondary, lyuboLogo } from '../assets/logos'
+import { githubSecondary, heroBlur, heroImageAnimate, heroImagePNG2, heroImagePNG3, heroTitle, linkedinSecondary, lyuboLogo } from '../assets/logos'
+import { motion } from "framer-motion";
+
 
 const Hero = () => {
 
@@ -16,9 +18,23 @@ const Hero = () => {
         scroll.scrollToTop({ smooth: true });
     }
 
+    const scrollAnimation = {
+        animate:
+            {
+                y: [0, -20, 0],
+            },
+        transition: {
+            duration: 4, // Total duration of the scroll (in seconds)
+            ease: "easeInOut", // Smooth easing for the movement
+            repeat: Infinity,
+            repeatType: "loop",
+
+        },
+    };
+
     return (
         <>
-        <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row items-center relative'>
+        <div className='max-w-screen-xl mx-auto flex flex-col md:mt-20 md:flex-row items-center relative'>
             <div className='flex flex-col items-center md:items-start p-4 mt-16 md:-mt-20 md:p-0 z-20'>
                 <div onClick={scrolltoTop}>
                             <img className='w-52 md:w-60 ml-2 mb-5' src={lyuboLogo} alt="Logo" />
@@ -42,7 +58,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <img className='w-full -mt-4 md:w-2/3 z-20' src={heroImagePNG2} alt="Hero Image" />
+            <img className='w-full -mt-4 md:w-2/3 z-20' src={heroImagePNG3} alt="Hero Image" />
+            <motion.img className='w-full -mt-4 md:w-2/3 right-0 bottom-0 z-20 absolute' src={heroImageAnimate} alt="Hero Image" {...scrollAnimation} />
         </div>
         <img src={heroBlur} alt="Hero Background" className='absolute top-0 left-0 -z-20 w-full h-full object-cover opacity-80' />
         </>

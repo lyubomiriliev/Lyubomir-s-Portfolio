@@ -1,33 +1,62 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
-import { heroBlur, lyuboLogo, splashLogo } from '../assets/logos'
+import { heroBlur, lyuboLogo } from '../assets/logos'
 
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlinePhone } from "react-icons/hi2";
 
-import { Field, Label, Switch } from '@headlessui/react'
+import {easeOut, motion, useAnimation, useInView} from "framer-motion";
+
 
 const Contacts = () => {
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, {once: true})
+  const animationControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+        animationControls.start('visible');
+    }
+}, [isInView, animationControls]);
+
+  const scrollAnimationVariants = {
+    hidden: { x: 1500 },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+        bounce: 0.5,
+        delay: 0,
+      },
+    },
+  }
+
 
 	const scrolltoTop = () => {
         scroll.scrollToTop({ smooth: true });
     }
 
-	
 
     return (
-        <div className='w-full mx-auto flex flex-col justify-center items-center'>
+        <div className='w-full mx-auto flex flex-col justify-center items-center' ref={ref}>
 			{/* CONTACT HEADER */}
-			<div className='w-full md:w-2/3 flex flex-col justify-center items-center'>
-                    <div className='w-full items-center flex justify-center gap-6 '>
+			<div className='w-full md:w-2/3 flex flex-col justify-center items-center '>
+                    <motion.div
+                      className='w-full items-center flex justify-center gap-6'
+                      initial="hidden"
+                      animate={animationControls}
+                      variants={scrollAnimationVariants}
+                    >
                         <span className='font-outfit font-light text-4xl md:text-5xl text-primary'>#03</span>
                         <div className='w-[3px] h-[36px] bg-primary'></div>
                         <h2 className='text-primary font-outfit font-bold text-4xl md:text-5xl uppercase'>Contact Me</h2>
-                    </div>
+                    </motion.div>
                 </div>
 			{/* LEFT COLUMN */}
-            <div className='max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row'>
+            <div className='max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row '>
                 <div className='flex-1 flex flex-col justify-center relative overflow-hidden md:rounded-tl-2xl md:rounded-bl-2xl'
 				>
 				<img src={heroBlur} className='absolute hidden md:block inset-0 w-full h-full object-cover z-0 opacity-80' alt="" />
@@ -64,7 +93,7 @@ const Contacts = () => {
             	</div>
 
 				{/* RIGHT COLUMN */}
-                <div className='flex-1  md:bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50 '>
+                <div className='flex-1 rounded-xl  md:bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50 '>
                 <form className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

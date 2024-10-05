@@ -3,6 +3,7 @@ import heroTitle from "../logos/heroTitle.svg";
 import heroTitlePNG from "../logos/heroTitlePNG.png"
 import heroImagePNG from "../logos/heroImagePNG.png"
 import heroImagePNG2 from "../logos/heroImagePNG2.png"
+import heroImagePNG3 from "../logos/heroImagePNG3.png"
 import heroImage from "../logos/portfolio1.svg";
 import linkedinSecondary from "../logos/linkedinpurple.png";
 import githubSecondary from "../logos/github.png";
@@ -41,6 +42,11 @@ import virtuosoLogoIcon from "../logos/virtuosoLogoIcon.svg"
 import discoveryImg from "../logos/discoveryImg.jpg"
 import virtuosoImg from "../logos/virtuosoImg.jpg"
 import hilinkImg from "../logos/hilinkImg.jpg"
+import reduxLogo from "../logos/reduxLogo.svg"
+import heroImageAnimate from "../logos/heroImageAnimate.png"
+import stripeLogo from "../logos/stripeLogo.svg"
+import nextJS2 from "../logos/nextJS2.svg"
+import reduxLogo2 from "../logos/reduxLogo2.svg"
 
 export {
   lyuboLogo,
@@ -78,18 +84,28 @@ export {
   discoveryImg,
   virtuosoImg,
   hilinkImg,
+  reduxLogo,
+  heroImageAnimate,
+  heroImagePNG3,
+  stripeLogo,
+  nextJS2,
+  reduxLogo2,
 };
 
 export const techStackLogos = [
-  jsLogo,
-  tsLogo,
-  reactLogo,
-  nextJS,
-  htmlLogo,
-  cssLogo,
-  sassLogo,
-  tailwindLogo,
-  firebaseLogo,
-  framerMotion,
-  figma,
+  { name: 'JavaScript', src: jsLogo },
+  { name: 'TypeScript', src: tsLogo },
+  { name: 'React', src: reactLogo },
+  { name: 'NextJs', src: nextJS },
+  { name: 'NextJs2', src: nextJS2 },
+  { name: 'Html', src: htmlLogo },
+  { name: 'Css', src: cssLogo },
+  { name: 'Sass', src: sassLogo },
+  { name: 'TailwindCSS', src: tailwindLogo },
+  { name: 'Firebase', src: firebaseLogo },
+  { name: 'Figma', src: figma },
+  { name: 'FramerMotion', src: framerMotion },
+  { name: 'Redux', src: reduxLogo },
+  { name: 'Redux2', src: reduxLogo2 },
+  { name: 'Stripe', src: stripeLogo}
 ];
