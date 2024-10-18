@@ -6,13 +6,11 @@ const TechStack = () => {
 
 
     const scrollAnimation = {
-        animate: {
-            x: [1600, 0], // Change -1500 to the width of your container to match the logos' width
-        },
+        initial: {opacity: 0, scale: 0.8},
+        animate: {opacity: 1, scale: 1,},
         transition: {
-            duration: 1.5, // Total duration of the scroll (in seconds)
+            duration: 2, // Total duration of the scroll (in seconds)
             ease: "easeInOut", // Smooth easing for the movement
-            bounce: 0.5, // Add a bounce effect when it reaches 0
         },
     };
 
@@ -29,12 +27,12 @@ const TechStack = () => {
                 <div className="w-[1px] md:w-[2px] bg-white h-6 md:h-12"></div>
                 {
                     filteredLogos.map((logo, index) => (
-                        <img 
+                        <motion.img 
                         key={index} 
                         className="w-5 md:w-16 rounded-md h-auto" 
                         src={logo.src}
                         alt="techStack logo"
-                        
+                        whileHover={{scale: 1.3}}
                         />
                     ))
                 }
@@ -50,7 +48,7 @@ const TechStack = () => {
             <div className="w-[90%] grid grid-cols-6 mt-5 justify-center gap-4 h-40 items-center">
                 {
                     filteredLogos.map((logo, index) => (
-                            <motion.img key={index} className="w-16 rounded-sm" src={logo.src} alt="techStack logo" {...scrollAnimation} />
+                            <motion.img key={index} className="w-16 rounded-sm" src={logo.src} alt="techStack logo" {...scrollAnimation}  />
                     ))
                 }
             </div>

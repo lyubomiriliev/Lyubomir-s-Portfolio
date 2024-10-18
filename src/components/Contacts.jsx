@@ -22,7 +22,7 @@ const Contacts = () => {
 }, [isInView, animationControls]);
 
   const scrollAnimationVariants = {
-    hidden: { x: 1500 },
+    hidden: { x: -1500 },
     visible: {
       x: 0,
       transition: {
@@ -56,7 +56,7 @@ const Contacts = () => {
                     </motion.div>
                 </div>
 			{/* LEFT COLUMN */}
-            <div className='max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row '>
+            <div className='max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row'>
                 <div className='flex-1 flex flex-col justify-center relative overflow-hidden md:rounded-tl-2xl md:rounded-bl-2xl'
 				>
 				<img src={heroBlur} className='absolute hidden md:block inset-0 w-full h-full object-cover z-0 opacity-80' alt="" />

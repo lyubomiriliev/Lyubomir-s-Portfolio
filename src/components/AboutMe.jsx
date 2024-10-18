@@ -31,7 +31,7 @@ const AboutMe = () => {
 
     
     return (
-        <div className='w-full mx-auto flex flex-col justify-center items-center py-10' ref={ref}>
+        <div className='w-full min-h-screen mx-auto flex flex-col justify-center items-center py-10' ref={ref}>
             <div className='w-full flex flex-col justify-center items-center'>
                     <motion.div className='w-full items-center flex justify-center gap-6'
                         initial="hidden"

@@ -16,11 +16,13 @@ const Layout = ({ initialSection }) => {
   const handleSectionClick = (section) => {
     setActiveSession(section);
     const sectionElement = document.getElementById(section);
-    const headerHeight = document.querySelector('header')?.offsetHeight || 0
-
-    if(sectionElement) {
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+  
+    if (section === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (sectionElement) {
       const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
-      window.scrollTo({ top: sectionOffset, behavior: "smooth"})
+      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
     }
     window.history.replaceState(null, null, `/${section}`);
   };
@@ -56,12 +58,16 @@ const Layout = ({ initialSection }) => {
     const section = initialSection || window.location.pathname.replace("/", "") || "home";
     const sectionElement = document.getElementById(section);
     const headerHeight = document.querySelector('header')?.offsetHeight || 0;
-    if (sectionElement) {
-      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
-      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
-      setActiveSession(section);
-    }
-  }, [initialSection])
+
+
+    if (section === "home") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else if (sectionElement) {
+    const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
+    window.scrollTo({ top: sectionOffset, behavior: "smooth" });
+    setActiveSession(section);
+  }
+}, [initialSection]);
 
   return (
     <div>

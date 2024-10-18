@@ -18,7 +18,7 @@ const Projects = () => {
     }, [isInView, animationControls]);
 
     const scrollAnimationVariants = {
-        hidden: { x: -1500 },
+        hidden: { x: 1500 },
         visible: {
             x: 0,
             transition: {
@@ -155,7 +155,7 @@ const Projects = () => {
                         webLink={project.webLink}
                         sourceCode={project.sourceCode}
                         techStack={project.techStack}
-                    />
+                        />
                 ))}
             </div>
         </div>

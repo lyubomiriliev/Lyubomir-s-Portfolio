@@ -45,7 +45,7 @@ const Hero = () => {
                     <div className='w-1/4 md:w-1/3 hidden ml-4 mt-2 h-[2px] bg-secondary'></div>
                     <p className='w-3/4 md:w-2/3 ml-4 mt-8 text-primary font-outfit font-light text-lg'>Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta.</p>
                     <div className='flex items-center w-2/3 text-primary hover:text-secondary duration-300'>
-                        <span onClick={handleDownload} className='w-3/4 md:w-2/3 ml-4 mt-4  font-medium font-outfit text-xl uppercase'>Download CV</span>
+                        <span onClick={handleDownload} className='w-3/4 md:w-2/3 ml-4 mt-4 cursor-pointer font-medium font-outfit text-xl uppercase'>Download CV</span>
                     </div>
                     <div className='flex justify-start items-center mt-3 ml-4 gap-4'>
                         <a href="https://www.linkedin.com/in/lyubomir-iliev-37ab32305/" target="_blank" rel="noopener noreferrer">
