@@ -38,8 +38,6 @@ const AboutMe = () => {
                         animate={animationControls}
                         variants={scrollAnimationVariants}
                     >
-                        <span className='font-outfit font-light text-5xl text-primary'>#01</span>
-                        <div className='w-[3px] h-[36px] bg-primary'></div>
                         <h2 className='text-primary font-outfit font-bold text-5xl uppercase'>About Me</h2>
                     </motion.div>
                 </div>

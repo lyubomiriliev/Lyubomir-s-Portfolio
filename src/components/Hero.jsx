@@ -42,7 +42,7 @@ const Hero = () => {
                 <img className='w-full hidden md:flex' src={heroTitle} alt="Hero Title" />
                 <h3 className='font-bold md:hidden font-outfit text-5xl text-center text-secondary'>Front-End React Developer</h3>
                 <div className='hidden md:block'>
-                    <div className='w-1/4 md:w-1/3 hidden ml-4 mt-2 h-[2px] bg-secondary'></div>
+                    <div className='w-1/4 md:w-1/3 ml-4 mt-2 h-[2px] bg-secondary'></div>
                     <p className='w-3/4 md:w-2/3 ml-4 mt-8 text-primary font-outfit font-light text-lg'>Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta.</p>
                     <div className='flex items-center w-2/3 text-primary hover:text-secondary duration-300'>
                         <span onClick={handleDownload} className='w-3/4 md:w-2/3 ml-4 mt-4 cursor-pointer font-medium font-outfit text-xl uppercase'>Download CV</span>

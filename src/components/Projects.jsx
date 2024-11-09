@@ -3,7 +3,6 @@ import { blackSea, bsemImg, discoveryImg, discoveryLogo, hilinkImg, hilinkLogo, 
 import Project from './Project';
 import { motion, useInView, useAnimation, delay } from 'framer-motion';
 
-import { techStackLogos } from "../assets/logos"
 
 
 const Projects = () => {
@@ -132,8 +131,6 @@ const Projects = () => {
                 variants={scrollAnimationVariants} // Use defined variants for the animation
             >
                 <div className='w-full items-center flex justify-center gap-6 '>
-                    <span className='font-outfit font-light text-5xl text-primary'>#02</span>
-                    <div className='w-[3px] h-[36px] bg-primary'></div>
                     <h2 className='text-primary font-outfit font-bold text-5xl uppercase'>Projects</h2>
                 </div>
             </motion.div>
