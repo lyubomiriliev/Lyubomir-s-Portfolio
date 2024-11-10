@@ -9,7 +9,7 @@ const Button = ({ button, handleDownload, variant = "primary" }) => {
       "bg-primary text-white hover:bg-secondary duration-300 ease-in-out",
     secondary: "bg-secondary text-white hover:bg-primary",
     outline:
-      "bg-tranpsarent border-2 border-primary text-primary hover:bg-primary hover:text-white duration-300 ease-in-out",
+      "bg-tranpsarent border-2 border-primary text-primary hover:bg-secondary hover:border-white hover:text-white duration-300 ease-in-out",
   };
 
   return (

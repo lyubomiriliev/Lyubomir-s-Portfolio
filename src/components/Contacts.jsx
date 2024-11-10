@@ -7,6 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlinePhone } from "react-icons/hi2";
 
 import { easeOut, motion, useAnimation, useInView } from "framer-motion";
+import SectionHeading from "./SectionHeading";
 
 const Contacts = () => {
   const ref = useRef(null);
@@ -49,29 +50,17 @@ const Contacts = () => {
           animate={animationControls}
           variants={scrollAnimationVariants}
         >
-          <span className="font-outfit font-light text-4xl md:text-5xl text-primary">
-            #03
-          </span>
-          <div className="w-[3px] h-[36px] bg-primary"></div>
-          <h2 className="text-primary font-outfit font-bold text-4xl md:text-5xl uppercase">
-            Contact Me
-          </h2>
+          <SectionHeading title="Contact me" subTitle="LET’S CONNECT" />
         </motion.div>
       </div>
       {/* LEFT COLUMN */}
-      <div className="max-w-screen-xl px-6 md:px-0 mt-20 w-full flex flex-col md:flex-row">
-        <div className="flex-1 flex flex-col justify-center relative overflow-hidden md:rounded-tl-2xl md:rounded-bl-2xl">
-          <img
-            src={heroBlur}
-            className="absolute hidden md:block inset-0 w-full h-full object-cover z-0 opacity-80"
-            alt=""
-          />
-
-          <div className="flex flex-col relative z-10 w-[90%] mx-auto space-y-8">
-            <h3 className="text-5xl font-outfit font-bold max-w-[400px] text-secondary">
-              Get in touch
+      <div className="max-w-screen-xl px-6 md:px-0 mt-10 w-full flex flex-col md:flex-row">
+        <div className="flex-1 flex flex-col justify-center bg-gradient-to-r from-sky-300/70 via-slate-50 to-fuchsia-300/70 relative overflow-hidden rounded-tl-xl rounded-tr-xl lg:rounded-tr-none px-6 py-10 lg:p-0 lg:rounded-tl-xl lg:rounded-bl-xl">
+          <div className="flex flex-col relative z-10 px-4 lg:px-20 w-[100%] mx-auto space-y-8">
+            <h3 className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary">
+              Let's work together
             </h3>
-            <p className="w-2/3 font-outfit font-light">
+            <p className="w-full font-outfit font-light">
               Proin volutpat consequat porttitor cras nullam gravida at. Orci
               molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
               Arcu sed malesuada et magna.
@@ -94,7 +83,7 @@ const Contacts = () => {
               <div className="z-50 cursor-pointer" onClick={scrolltoTop}>
                 <ScrollLink to="home" smooth={true} duration={400}>
                   <img
-                    className="w-52 md:w-60 -ml-1"
+                    className="w-52 md:w-64 -ml-1"
                     src={lyuboLogo}
                     alt="Logo"
                   />
@@ -105,9 +94,9 @@ const Contacts = () => {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex-1 rounded-xl  md:bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50 ">
+        <div className="flex-1 rounded-xl lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 ">
           <form className="mx-auto mt-16 max-w-xl sm:mt-20">
-            <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="first-name"

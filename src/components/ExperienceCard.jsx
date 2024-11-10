@@ -15,12 +15,12 @@ const ExperienceCard = ({
   return (
     <div className="w-full flex flex-col items-start p-4 rounded-lg bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 shadow-md space-y-3 relative overflow-hidden">
       {customText && (
-        <p className="uppercase text-9xl lg:text-12xl font-outfit text-primary/60 font-semibold mt- -z-0 absolute -right-[100%] -bottom-10 lg:-right-[79%] lg:-bottom-16 select-none">
+        <p className="uppercase text-9xl lg:text-12xl font-outfit text-primary/60 font-semibold mt- -z-0 absolute -right-[100%] -bottom-12 lg:-right-[79%] lg:-bottom-16 select-none">
           {customText}
         </p>
       )}
       {customText2 && (
-        <p className="text-secondary/60 uppercase text-9xl lg:text-12xl font-outfit font-semibold mt-4 -z-0 absolute right-1 -bottom-10 lg:-right-5 lg:-bottom-16 select-none">
+        <p className="text-secondary/60 uppercase text-9xl lg:text-12xl font-outfit font-semibold mt-4 -z-0 absolute right-1 -bottom-12 lg:-right-5 lg:-bottom-16 select-none">
           {customText2}
         </p>
       )}
