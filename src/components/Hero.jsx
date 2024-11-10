@@ -1,6 +1,7 @@
 import React from 'react'
 import { githubSecondary, heroBlur, heroImageAnimate, heroImagePNG2, heroImagePNG3, heroTitle, linkedinSecondary, lyuboLogo } from '../assets/logos'
 import { motion } from "framer-motion";
+import Button from './Button';
 
 
 const Hero = () => {
@@ -44,8 +45,10 @@ const Hero = () => {
                 <div className='hidden md:block'>
                     <div className='w-1/4 md:w-1/3 ml-4 mt-2 h-[2px] bg-secondary'></div>
                     <p className='w-3/4 md:w-2/3 ml-4 mt-8 text-primary font-outfit font-light text-lg'>Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta.</p>
-                    <div className='flex items-center w-2/3 text-primary hover:text-secondary duration-300'>
-                        <span onClick={handleDownload} className='w-3/4 md:w-2/3 ml-4 mt-4 cursor-pointer font-medium font-outfit text-xl uppercase'>Download CV</span>
+                    <div className='flex items-center w-full gap-4 py-4'>
+                        {/* <span onClick={handleDownload} className='w-3/4 md:w-2/3 ml-4 mt-4 cursor-pointer font-medium font-outfit text-xl uppercase'>Download CV</span> */}
+                        <Button handleDownload={handleDownload} button="DOWNLOAD cv" variant='primary' />
+                        <Button button="SEE MY WORK" variant='outline' />
                     </div>
                     <div className='flex justify-start items-center mt-3 ml-4 gap-4'>
                         <a href="https://www.linkedin.com/in/lyubomir-iliev-37ab32305/" target="_blank" rel="noopener noreferrer">

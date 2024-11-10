@@ -8,6 +8,7 @@ import TechStack from "./components/TechStack"
 import Footer from "./components/Footer"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Services from "./components/Services"
 
 const Layout = ({ initialSection }) => {
 
@@ -82,6 +83,9 @@ const Layout = ({ initialSection }) => {
       <div id="about">
         <AboutMe />
       </div>
+      <div id="services">
+        <Services />
+      </div>
       <div id="projects">
         <Projects />
       </div>
@@ -105,6 +109,10 @@ function App() {
         {
           path: "/about",
           element: <Layout initialSection="about" />
+        },
+        {
+          path: "/services",
+          element: <Layout initialSection="services" />
         },
         {
           path: "/projects",
