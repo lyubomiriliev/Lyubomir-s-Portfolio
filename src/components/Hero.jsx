@@ -49,12 +49,7 @@ const Hero = () => {
               alt="Logo"
             />
           </div>
-          <img
-            className="w-full hidden md:flex"
-            src={heroTitle}
-            alt="Hero Title"
-          />
-          <h3 className="font-bold md:hidden font-outfit text-5xl text-center text-secondary">
+          <h3 className="font-bold font-outfit text-5xl lg:text-6xl leading-tight text-center lg:text-left lg:pl-2 text-secondary">
             Front-End React Developer
           </h3>
           <div className="hidden md:block">

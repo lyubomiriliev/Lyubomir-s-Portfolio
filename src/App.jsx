@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react"
-import AboutMe from "./components/AboutMe"
-import Contacts from "./components/Contacts"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import TechStack from "./components/TechStack"
-import Footer from "./components/Footer"
+import { useEffect, useState } from "react";
+import AboutMe from "./components/AboutMe";
+import Contacts from "./components/Contacts";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import TechStack from "./components/TechStack";
+import Footer from "./components/Footer";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Services from "./components/Services"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Services from "./components/Services";
+import Experience from "./components/Experience";
 
 const Layout = ({ initialSection }) => {
-
   const [activeSession, setActiveSession] = useState("home");
 
   const handleSectionClick = (section) => {
     setActiveSession(section);
     const sectionElement = document.getElementById(section);
-    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
-  
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+
     if (section === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (sectionElement) {
@@ -31,16 +31,19 @@ const Layout = ({ initialSection }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+      const headerHeight = document.querySelector("header")?.offsetHeight || 0;
       const sections = ["home", "about", "projects", "contact"];
       const sectionOffsets = sections.map((section) => ({
         id: section,
         offset: document.getElementById(section).offsetTop - headerHeight - 20,
-      }))
+      }));
 
       const activeSection = sectionOffsets.find((section, index) => {
         const nextSection = sectionOffsets[index + 1];
-        return scrollPosition >= section.offset && (!nextSection || scrollPosition < nextSection.offset);
+        return (
+          scrollPosition >= section.offset &&
+          (!nextSection || scrollPosition < nextSection.offset)
+        );
       });
 
       if (activeSection && activeSection.id !== activeSession) {
@@ -49,32 +52,35 @@ const Layout = ({ initialSection }) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, [activeSession])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeSession]);
 
   useEffect(() => {
-    const section = initialSection || window.location.pathname.replace("/", "") || "home";
+    const section =
+      initialSection || window.location.pathname.replace("/", "") || "home";
     const sectionElement = document.getElementById(section);
-    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
-
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
 
     if (section === "home") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } else if (sectionElement) {
-    const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
-    window.scrollTo({ top: sectionOffset, behavior: "smooth" });
-    setActiveSession(section);
-  }
-}, [initialSection]);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (sectionElement) {
+      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
+      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
+      setActiveSession(section);
+    }
+  }, [initialSection]);
 
   return (
     <div>
       <div id="home"></div>
-      <Header activeSession={activeSession} onSectionClick={handleSectionClick} />
-      <div >
+      <Header
+        activeSession={activeSession}
+        onSectionClick={handleSectionClick}
+      />
+      <div>
         <Hero />
       </div>
       <div>
@@ -82,6 +88,9 @@ const Layout = ({ initialSection }) => {
       </div>
       <div id="about">
         <AboutMe />
+      </div>
+      <div id="experience">
+        <Experience />
       </div>
       <div id="services">
         <Services />
@@ -96,11 +105,10 @@ const Layout = ({ initialSection }) => {
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -108,30 +116,33 @@ function App() {
       children: [
         {
           path: "/about",
-          element: <Layout initialSection="about" />
+          element: <Layout initialSection="about" />,
+        },
+        {
+          path: "/experience",
+          element: <Layout initialSection="experience" />,
         },
         {
           path: "/services",
-          element: <Layout initialSection="services" />
+          element: <Layout initialSection="services" />,
         },
         {
           path: "/projects",
-          element: <Layout initialSection="projects" />
+          element: <Layout initialSection="projects" />,
         },
         {
           path: "/contact",
-          element: <Layout initialSection="contact" />
+          element: <Layout initialSection="contact" />,
         },
         {
           path: "/home",
-          element: <Layout initialSection="home" />
+          element: <Layout initialSection="home" />,
         },
-      ]
-    }
-  ])
+      ],
+    },
+  ]);
 
-  return <RouterProvider router={router} />
-
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

@@ -48,6 +48,13 @@ import stripeLogo from "../logos/stripeLogo.svg";
 import nextJS2 from "../logos/nextJS2.svg";
 import reduxLogo2 from "../logos/reduxLogo2.svg";
 
+import problemSolving from "../logos/problemSolving.png";
+import detail from "../logos/detail.png";
+import creative from "../logos/creative.png";
+import collab from "../logos/collab.png";
+import learn from "../logos/learn.png";
+import task from "../logos/task.png";
+
 export {
   lyuboLogo,
   heroTitle,
@@ -90,6 +97,12 @@ export {
   stripeLogo,
   nextJS2,
   reduxLogo2,
+  problemSolving,
+  detail,
+  creative,
+  collab,
+  learn,
+  task,
 };
 
 export const techStackLogos = [
