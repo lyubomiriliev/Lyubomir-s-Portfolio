@@ -10,6 +10,7 @@ import {
   lyuboLogo,
 } from "../assets/logos";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -43,7 +44,7 @@ const Hero = () => {
         <div className="flex flex-col items-center md:items-start p-4 mt-16 md:-mt-20 md:p-0 z-20">
           <div onClick={scrolltoTop}>
             <img
-              className="w-52 md:w-60 ml-2 mb-5"
+              className="w-52 md:w-80 ml-2 mb-5"
               src={lyuboLogo}
               alt="Logo"
             />
@@ -57,18 +58,18 @@ const Hero = () => {
             Front-End React Developer
           </h3>
           <div className="hidden md:block">
-            <div className="w-1/4 md:w-1/3 ml-4 mt-2 h-[2px] bg-secondary"></div>
-            <p className="w-3/4 md:w-2/3 ml-4 mt-8 text-primary font-outfit font-light text-lg">
+            {/* <div className="w-1/4 md:w-1/3 ml-4 mt-2 h-[2px] bg-secondary"></div> */}
+            <p className="w-3/4 md:w-2/4 ml-4 mt-8 text-primary font-outfit font-light text-lg">
               Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus
               semper tortor mauris porta.
             </p>
-            <div className="flex items-center w-2/3 text-primary hover:text-secondary duration-300">
-              <span
-                onClick={handleDownload}
-                className="w-3/4 md:w-2/3 ml-4 mt-4 cursor-pointer font-medium font-outfit text-xl uppercase"
-              >
-                Download CV
-              </span>
+            <div className="flex items-center w-full py-4 pl-3 gap-4">
+              <Button handleDownload={handleDownload} button="Download Cv" />
+              <Button
+                handleDownload={handleDownload}
+                button="See my work"
+                variant="outline"
+              />
             </div>
             <div className="flex justify-start items-center mt-3 ml-4 gap-4">
               <a
