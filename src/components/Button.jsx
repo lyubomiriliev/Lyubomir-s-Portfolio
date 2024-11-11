@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ button, handleDownload, variant = "primary" }) => {
   const baseStyles =
-    "font-outfit font-bold text-lg px-6 py-4 rounded-xl uppercase";
+    "font-outfit font-bold text-lg px-4 py-3 rounded-full uppercase";
 
   const variantStyles = {
     primary:

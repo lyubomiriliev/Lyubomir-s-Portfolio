@@ -15,7 +15,7 @@ const TimelineItem = ({
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="absolute -top-0 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary bg-white"
+        className="absolute -top-0 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary bg-slate-200 shadow-md"
       >
         <path
           fillRule="evenodd"
@@ -25,8 +25,9 @@ const TimelineItem = ({
       </svg>
       <div className="ml-6">
         <h4 className="font-bold text-primary uppercase text-xl">{title}</h4>
-        <p className="text-gray-600 text-sm md:text-base font-light">
-          {location} {level && <span className="font-semibold">, {level}</span>}
+        <p className="text-gray-600 text-sm md:text-base font-medium">
+          {location}{" "}
+          {level && <span className="font-semibold"> - {level}</span>}
         </p>
         {role && <p className="text-gray-600 font-normal">{role}</p>}
         {achievements && (
@@ -35,14 +36,15 @@ const TimelineItem = ({
           </p>
         )}
         <ul className="list-disc list-inside mt-2 max-w-[400px]">
+          <h3 className="font-semibold text-gray-800">Skills Acquired:</h3>
           {skills &&
             skills.map((skill, index) => (
-              <li key={index} className="text-gray-600 font-light">
+              <li key={index} className="text-gray-600 font-light list-none">
                 {skill}
               </li>
             ))}
         </ul>
-        <span className="mt-1 block text-base font-semibold text-primary">
+        <span className="mt-1 block text-lg font-semibold text-primary">
           {years}
         </span>
       </div>

@@ -32,7 +32,7 @@ const AboutMe = () => {
       className="w-full mx-auto flex flex-col justify-center items-center py-4 lg:py-10"
       ref={ref}
     >
-      <div className="max-w-screen-xl mx-auto bg-gradient-to-r relative lg:overflow-hidden h-[600px] rounded-xl lg:bg-gradient-to-bl lg:from-slate-100 lg:via-slate-50 lg:to-slate-200 lg:shadow-sm flex flex-col md:flex-row items-center justify-between">
+      <div className="max-w-screen-xl mx-auto bg-gradient-to-r relative lg:overflow-hidden h-[600px] rounded-[24px] lg:bg-gradient-to-bl lg:from-slate-100 lg:via-slate-50 lg:to-slate-200 lg:shadow-sm flex flex-col md:flex-row items-center justify-between">
         <div className="w-[90%] md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-start py-10 items-center">
           <motion.div
             className="w-full items-center flex justify-center"

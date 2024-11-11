@@ -48,14 +48,14 @@ export const educationData = [
   {
     name: "Design - Freelancer",
     years: "(2017-2023)",
-    role: "Graphic Designer / UX/UI",
+    role: "Graphic Designer | UX/UI",
     skills: [
       "Design brand identity for various Bulgarian companies - El Shisha, Vapy, Fitty.",
       "Design logotypes, web pages, banners, flyers, billboards, social media content, menus, woblers and more",
     ],
   },
   {
-    name: "Soft Uni React Course and Self Learning",
+    name: "Soft Uni Advanced React Course",
     years: "(2022-2024)",
     role: "Front-End React Developer",
     skillsLearned: [
@@ -63,7 +63,7 @@ export const educationData = [
       "JavaScript, JSX, React",
       "TailwindCSS, Zustand, Firebase, Git",
     ],
-    achievements: "Passed SoftUni React JS 2023 Course with 6.00.",
+    achievements: "Passed SoftUni React JS 2023 Course with 6.00",
   },
 ];
 
@@ -129,6 +129,29 @@ export const skillsDev = [
     classEnd: ">",
     text: "API Integration",
     h2: "</h1>",
+  },
+];
+
+export const skillsDevAfter = [
+  {
+    logo: "/web.png",
+    text: "Web Application Development",
+  },
+  {
+    logo: "/singlePage.png",
+    text: "Single Page Applications (SPA)",
+  },
+  {
+    logo: "/performance.png",
+    text: "Performance Optimization",
+  },
+  {
+    logo: "/interactive.png",
+    text: "Interactive UI Components",
+  },
+  {
+    logo: "/api.png",
+    text: "API Integration",
   },
 ];
 

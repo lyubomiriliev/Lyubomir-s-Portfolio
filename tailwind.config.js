@@ -15,8 +15,12 @@ export default {
         gradientLight: "#454545",
         grayGradientBlack: "#CECECE",
         grayGradientLight: "#FFFFFF",
-
-
+      },
+      perspective: {
+        1000: "1000px",
+      },
+      rotate: {
+        "y-180": "rotateY(180deg)",
       },
       fontSize: {
         "6xl": "4rem", // 64px
@@ -29,5 +33,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".transform-style-3d": {
+          "transform-style": "preserve-3d",
+        },
+        ".backface-hidden": {
+          "backface-visibility": "hidden",
+        },
+      });
+    },
+  ],
 };

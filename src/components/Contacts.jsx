@@ -55,7 +55,7 @@ const Contacts = () => {
       </div>
       {/* LEFT COLUMN */}
       <div className="max-w-screen-xl px-6 md:px-0 mt-10 w-full flex flex-col md:flex-row">
-        <div className="flex-1 flex flex-col justify-center bg-gradient-to-r from-sky-300/70 via-slate-50 to-fuchsia-300/70 relative overflow-hidden rounded-tl-xl rounded-tr-xl lg:rounded-tr-none px-6 py-10 lg:p-0 lg:rounded-tl-xl lg:rounded-bl-xl">
+        <div className="flex-1 flex flex-col justify-center bg-gradient-to-r from-sky-300/70 via-slate-50 to-fuchsia-300/70 relative overflow-hidden rounded-tl-[24px] rounded-tr-[24px] lg:rounded-tr-none px-6 py-10 lg:p-0 lg:rounded-tl-[24px] lg:rounded-bl-[24px] lg:rounded-bl-[24px">
           <div className="flex flex-col relative z-10 px-4 lg:px-20 w-[100%] mx-auto space-y-8">
             <h3 className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary">
               Let's work together
@@ -94,7 +94,7 @@ const Contacts = () => {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex-1 rounded-xl lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 ">
+        <div className="flex-1 rounded-bl-[24px] rounded-br-[24px] lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none lg:rounded-tr-[24px] lg:rounded-br-[24px] rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 ">
           <form className="mx-auto mt-16 max-w-xl sm:mt-20">
             <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2">
               <div>

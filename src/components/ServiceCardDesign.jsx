@@ -1,8 +1,6 @@
 import React from "react";
-import { skillsDev } from "../utils/constants";
-import { lyuboLogo } from "../assets/logos";
 
-const ServiceCardDesign = ({ title, titleEnd, underTittle, closeTag }) => {
+const ServiceCardDesign = () => {
   return (
     <div className="w-full flex flex-col relative overflow-hidden lg:w-[525px] h-[555px] lg:h-[650px] justify-start bg-gradient-to-r from-grayGradientBlack via-grayGradientLight to-grayGradientBlack lg:shadow-md px-[20px] py-[20px] rounded-[24px]">
       <div className="flex flex-col items-center">

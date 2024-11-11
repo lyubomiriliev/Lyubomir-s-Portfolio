@@ -22,8 +22,8 @@ const Project = ({
   );
 
   return (
-    <div className="w-full flex h-[450px] md:h-[540px] space-x-6 px-4 py-4 rounded-xl group relative">
-      <div className="w-full flex flex-col justify-around rounded-xl bg-gradient-to-r from-slate-200 via-slate-50 to-slate-200 overflow-hidden relative select-none">
+    <div className="w-full flex h-[450px] md:h-[540px] space-x-6 px-4 py-4 rounded-[24px] group relative">
+      <div className="w-full flex flex-col justify-around rounded-[24px] bg-gradient-to-r from-slate-200 via-slate-50 to-slate-200 overflow-hidden relative select-none">
         <div className="flex justify-center items-center p-2">
           <img
             src="/vyaradigital.png"

@@ -37,11 +37,11 @@ const ExperienceCard = ({
           Achievements: {achievements}
         </p>
       )}
-      <div className="mt-2 w-2/4 z-50">
+      <div className="mt-2 w-full z-50">
         <h3 className="font-semibold text-gray-800">Skills Acquired:</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
+            <li key={index}>{skill}2</li>
           ))}
         </ul>
       </div>
