@@ -1,8 +1,9 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import ServiceCard from "./ServiceCard";
-import { softSkills } from "../utils/constants";
+import { skillsDev, softSkills } from "../utils/constants";
 import { div } from "framer-motion/client";
+
 
 const Services = () => {
   return (
@@ -10,26 +11,7 @@ const Services = () => {
       <SectionHeading title="services" subTitle="What i provide" />
       <div className="grid grid-cols-1 lg:flex w-full justify-center items-center mt-10 gap-6 px-4 lg:px-0">
         <ServiceCard
-          title="Front-End development"
-          skills={[
-            "Component-Driven Development",
-            "Web Application Development",
-            "Single Page Applications (SPA)",
-            "API Integration",
-            "Performance Optimization",
-            "Interactive UI Components",
-          ]}
-        />
-        <ServiceCard
-          title="Branding and Web design"
-          skills={[
-            "Responsive and Mobile-First Design",
-            "Proficient in UX/UI design",
-            "Prototyping and Wireframing",
-            "Visual Consistency",
-            "Typography and Color Theory",
-            "Intuitive Interfaces",
-          ]}
+          title="<div className=“Front-End-Development”>"
         />
       </div>
       <h1 className="text-3xl text-secondary font-outfit font-bold py-6 uppercase">

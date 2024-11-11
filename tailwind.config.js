@@ -9,6 +9,14 @@ export default {
       colors: {
         primary: "#019ECF",
         secondary: "#331942",
+        orange: "#EC9356",
+        lightBlue: "#8ADBFF",
+        gradientBlack: "#1F1F1F",
+        gradientLight: "#454545",
+        grayGradientBlack: "#CECECE",
+        grayGradientLight: "#FFFFFF",
+
+
       },
       fontSize: {
         "6xl": "4rem", // 64px
