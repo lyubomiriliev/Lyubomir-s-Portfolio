@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
-import Experience from "./components/Experience";
+import Timeline from "./components/Timeline";
 
 const Layout = ({ initialSection }) => {
   const [activeSession, setActiveSession] = useState("home");
@@ -90,7 +90,7 @@ const Layout = ({ initialSection }) => {
         <AboutMe />
       </div>
       <div id="experience">
-        <Experience />
+        <Timeline />
       </div>
       <div id="services">
         <Services />

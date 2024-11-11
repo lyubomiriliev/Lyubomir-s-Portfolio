@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Project from "./Project";
 import { motion, useInView, useAnimation, delay } from "framer-motion";
 import { projectsData } from "../utils/constants";
+import SectionHeading from "./SectionHeading";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -38,11 +39,7 @@ const Projects = () => {
         animate={animationControls} // Control animation using animationControls
         variants={scrollAnimationVariants} // Use defined variants for the animation
       >
-        <div className="w-full items-center flex justify-center gap-6 ">
-          <h2 className="text-primary font-outfit font-bold text-5xl uppercase">
-            Projects
-          </h2>
-        </div>
+        <SectionHeading subTitle="SHOWCASE OF MY WORK" title="PROJECTS" />
       </motion.div>
 
       <div className="w-full md:max-w-screen-xl mx-auto items-center grid md:grid-cols-2 py-10">
