@@ -42,7 +42,7 @@ const TimelineItem = ({
               </li>
             ))}
         </ul>
-        <span className="mt-1 block text-base font-bold text-primary">
+        <span className="mt-1 block text-base font-semibold text-primary">
           {years}
         </span>
       </div>

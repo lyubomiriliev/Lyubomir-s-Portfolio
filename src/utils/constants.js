@@ -96,36 +96,41 @@ export const softSkills = [
 
 export const skillsDev = [
   {
-    classname: "<h1 className=",
-    h1: "”text-3xl font-bold text-white”>",
+    h1: "<h1 className=",
+    class: "”text-3xl font-bold text-white”",
+    classEnd: ">",
     text: "Web Application Development",
     h2: "</h1>",
   },
   {
-    classname: "<h1 className=",
-    h1: "”text-3xl font-bold text-white”>",
+    h1: "<h1 className=",
+    class: "”text-3xl font-bold text-white”",
+    classEnd: ">",
     text: "Single Page Applications (SPA)",
     h2: "</h1>",
   },
   {
-    classname: "<h1 className=",
-    h1: "”text-3xl font-bold text-white”>",
+    h1: "<h1 className=",
+    class: "”text-3xl font-bold text-white”",
+    classEnd: ">",
     text: "Performance Optimization",
     h2: "</h1>",
   },
   {
-    classname: "<h1 className=",
-    h1: "”text-3xl font-bold text-white”>",
+    h1: "<h1 className=",
+    class: "”text-3xl font-bold text-white”",
+    classEnd: ">",
     text: "Interactive UI Components",
     h2: "</h1>",
   },
   {
-    classname: "<h1 className=",
-    h1: "”text-3xl font-bold text-white”>",
+    h1: "<h1 className=",
+    class: "”text-3xl font-bold text-white”",
+    classEnd: ">",
     text: "API Integration",
     h2: "</h1>",
   },
-]
+];
 
 export const projectsData = [
   {

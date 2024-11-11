@@ -10,7 +10,7 @@ const Timeline = () => {
         title="Education & Experience"
         subTitle="Journey Roadmap"
       />
-      <div className="space-y-4 border-l-2 border-primary border-dashed">
+      <div className="space-y-4 border-l-2 border-primary border-1">
         {educationData.map((item, index) => (
           <TimelineItem
             key={index}
