@@ -157,6 +157,22 @@ export const skillsDevAfter = [
 
 export const projectsData = [
   {
+    logoSrc: hilinkLogo,
+    title: "Vyara Digital",
+    subTitle: "Portfolio Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
+    technologies: "#NextJs #TypeScript #TailwindCSS #Vercel #FramerMotion",
+    imgSrc: hilinkImg,
+    primaryButtonLabel: "Live Demo",
+    secondaryButtonLabel: "Source Code",
+    testAccEmail: "test@gmail.com",
+    testAccPw: "test123",
+    webLink: "https://pop-shot-social-media-website.web.app/",
+    sourceCode: "https://github.com/lyubomiriliev/Travel-App-NextJS",
+    techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
+  },
+  {
     logoSrc: blackSea,
     title: "BlackSea Electromobility",
     subTitle: "EV CHARGING STATIONS WEBSITE",
@@ -171,6 +187,24 @@ export const projectsData = [
     webLink: "https://app.bse-mobility.eu/",
     sourceCode: "https://github.com/lyubomiriliev/BlackSea-electromobility",
     techStack: ["JavaScript", "React", "TailwindCSS", "Firebase", "Figma"],
+  },
+  {
+    logoSrc: virtuosoLogoIcon,
+    title: "Virtuoso Barbershop",
+    subTitle: "barber shop website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
+    technologies:
+      "#NextJS #TypeScript #TailwindCSS #FramerMotion #Vercel #i18next",
+    imgSrc: virtuosoImg,
+    primaryButtonLabel: "Live Demo",
+    secondaryButtonLabel: "Source Code",
+    testAccEmail: "test@gmail.com",
+    testAccPw: "test123",
+    webLink: "https://pop-shot-social-media-website.web.app/",
+    sourceCode:
+      "https://github.com/lyubomiriliev/PopShot-Social-Media-SOFTUNI-2023-",
+    techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
   },
   {
     logoSrc: nextLogo,
@@ -228,39 +262,5 @@ export const projectsData = [
     webLink: "https://booking.discoverybg.eu/",
     sourceCode: "https://github.com/lyubomiriliev/DISCOVERYBG-Booking-Website",
     techStack: ["JavaScript", "React", "TailwindCSS", "Figma"],
-  },
-  {
-    logoSrc: hilinkLogo,
-    title: "Hilink",
-    subTitle: "travel app",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
-    technologies: "#NextJs #TypeScript #TailwindCSS #Vercel #FramerMotion",
-    imgSrc: hilinkImg,
-    primaryButtonLabel: "Live Demo",
-    secondaryButtonLabel: "Source Code",
-    testAccEmail: "test@gmail.com",
-    testAccPw: "test123",
-    webLink: "https://pop-shot-social-media-website.web.app/",
-    sourceCode: "https://github.com/lyubomiriliev/Travel-App-NextJS",
-    techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
-  },
-  {
-    logoSrc: virtuosoLogoIcon,
-    title: "Virtuoso",
-    subTitle: "barber shop website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
-    technologies:
-      "#NextJS #TypeScript #TailwindCSS #FramerMotion #Vercel #i18next",
-    imgSrc: virtuosoImg,
-    primaryButtonLabel: "Live Demo",
-    secondaryButtonLabel: "Source Code",
-    testAccEmail: "test@gmail.com",
-    testAccPw: "test123",
-    webLink: "https://pop-shot-social-media-website.web.app/",
-    sourceCode:
-      "https://github.com/lyubomiriliev/PopShot-Social-Media-SOFTUNI-2023-",
-    techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
   },
 ];

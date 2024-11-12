@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import SectionHeading from "./SectionHeading";
-import ServiceCard from "./ServiceCardDev";
-import { skillsDev, softSkills } from "../utils/constants";
+import { softSkills } from "../utils/constants";
 import { motion, useInView, useAnimation, delay } from "framer-motion";
-import ServiceCardDev from "./ServiceCardDev";
 import ServiceCardDesign from "./ServiceCardDesign";
-import ServiceCardDevBack from "./ServiceCardDevBack";
+import FlipCard from "./FlipCard";
 
 const Services = () => {
   const ref = useRef(null);
@@ -45,7 +43,7 @@ const Services = () => {
         <SectionHeading title="services" subTitle="What i provide" />
       </motion.div>
       <div className="grid grid-cols-1 lg:flex w-full justify-center items-center mt-10 gap-6 px-4 lg:px-0">
-      <FlipCard
+        <FlipCard
           title="<div className="
           underTittle="Front-End-Development"
           closeTag=">"

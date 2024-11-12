@@ -5,20 +5,20 @@ import ServiceCardDevBack from "./ServiceCardDevBack";
 const FlipCard = ({ title, titleEnd, underTittle, closeTag }) => {
   return (
     <div className="group perspective w-full lg:w-[525px] h-[650px]">
-      <div className="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+      <div className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front Side */}
-        <div className="absolute w-full h-full backface-hidden">
-          <ServiceCardDev 
-            title={title} 
-            titleEnd={titleEnd} 
-            underTittle={underTittle} 
-            closeTag={closeTag} 
+        <div className="absolute w-full h-full [backface-visibility:hidden]">
+          <ServiceCardDev
+            title={title}
+            titleEnd={titleEnd}
+            underTittle={underTittle}
+            closeTag={closeTag}
           />
         </div>
 
         {/* Back Side */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <ServiceCardDevBack title={title} />
+        <div className="absolute w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <ServiceCardDevBack />
         </div>
       </div>
     </div>

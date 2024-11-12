@@ -1,11 +1,13 @@
 import React from "react";
 import { skillsDevAfter } from "../utils/constants";
 
-const ServiceCardDevBack = ({ title }) => {
+const ServiceCardDevBack = () => {
   return (
-    <div className="w-full flex flex-col relative overflow-hidden lg:w-[525px] h-[520px] lg:h-[650px] justify-start bg-gradient-to-r from-secondary via-gray-900 to-[#210C30] lg:shadow-md px-[20px] py-[20px] rounded-[24px]">
+    <div className="w-full flex flex-col relative overflow-hidden lg:w-[525px] h-[650px] justify-start bg-gradient-to-r from-secondary via-gray-900 to-[#210C30] lg:shadow-md px-[20px] py-[20px] rounded-[24px]">
       <div className="flex flex-col text-center font-outfit py-8">
-        <h1 className="text-3xl font-bold uppercase text-white">{title}</h1>
+        <h1 className="text-3xl font-bold uppercase text-white">
+          Front End Development
+        </h1>
       </div>
       <div className="flex flex-col px-4 text-center gap-4">
         {skillsDevAfter.map((skill, index) => (
