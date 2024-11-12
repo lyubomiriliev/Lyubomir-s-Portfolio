@@ -45,12 +45,13 @@ const Services = () => {
         <SectionHeading title="services" subTitle="What i provide" />
       </motion.div>
       <div className="grid grid-cols-1 lg:flex w-full justify-center items-center mt-10 gap-6 px-4 lg:px-0">
-        <ServiceCardDev
+      <FlipCard
           title="<div className="
           underTittle="Front-End-Development"
           closeTag=">"
           titleEnd="</div>"
         />
+        <ServiceCardDesign />
       </div>
       <h1 className="text-3xl text-secondary font-outfit font-bold py-6 uppercase">
         Personal Skills

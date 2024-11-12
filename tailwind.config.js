@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -16,31 +16,31 @@ export default {
         grayGradientBlack: "#CECECE",
         grayGradientLight: "#FFFFFF",
       },
-      perspective: {
-        1000: "1000px",
-      },
-      rotate: {
-        "y-180": "rotateY(180deg)",
-      },
       fontSize: {
-        "6xl": "4rem", // 64px
-        "7xl": "5rem", // 80px
-        "8xl": "6rem", // 96px
-        "9xl": "7rem", // 112px
-        "10xl": "8rem", // 128px
-        "11xl": "9rem", // 144px
-        "12xl": "10rem", // 160px
+        "6xl": "4rem",
+        "7xl": "5rem",
+        "8xl": "6rem",
+        "9xl": "7rem",
+        "10xl": "8rem",
+        "11xl": "9rem",
+        "12xl": "10rem",
       },
     },
   },
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        ".transform-style-3d": {
+        ".perspective": {
+          perspective: "1000px",
+        },
+        ".preserve-3d": {
           "transform-style": "preserve-3d",
         },
         ".backface-hidden": {
           "backface-visibility": "hidden",
+        },
+        ".rotate-y-180": {
+          transform: "rotateY(180deg)",
         },
       });
     },

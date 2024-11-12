@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { skillsDev } from "../utils/constants";
 import ServiceCardDevBack from "./ServiceCardDevBack";
 
 const ServiceCardDev = ({ title, titleEnd, underTittle, closeTag }) => {
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setFlipped(!flipped);
-  };
 
   return (
-    <div className="flex gap-4" onClick={handleFlip}>
+    <div className="flex gap-4">
       <div className="w-full flex flex-col relative overflow-hidden lg:w-[525px] justify-center bg-gradient-to-r from-secondary via-gray-900 to-[#210C30] lg:shadow-md px-[20px] py-[20px] rounded-[24px]">
         <div className="w-full h-[40px] flex items-center gap-3 px-4 bg-[#0C0C0C] rounded-[14px]">
           <div className="w-6 h-6 rounded-full bg-orange"></div>
@@ -59,7 +54,6 @@ const ServiceCardDev = ({ title, titleEnd, underTittle, closeTag }) => {
           {titleEnd}
         </h1>
       </div>
-      {flipped && <ServiceCardDevBack title="Front End Development" />}
     </div>
   );
 };

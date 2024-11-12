@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 
 const Timeline = () => {
   return (
-    <div className="w-full lg:w-2/3 flex flex-col gap-8 mx-auto h-full justify-start px-10 lg:px-2 py-10">
+    <div className="w-full lg:w-2/3 flex flex-col gap-8 mx-auto h-full justify-start px-6 lg:px-2 py-10">
       <SectionHeading
         title="Education & Experience"
         subTitle="Journey Roadmap"
