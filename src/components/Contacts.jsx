@@ -6,10 +6,10 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlinePhone } from "react-icons/hi2";
 
-import { easeOut, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
-const Contacts = () => {
+const Contacts = ({ containerVariants, itemVariants }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animationControls = useAnimation();
@@ -20,25 +20,15 @@ const Contacts = () => {
     }
   }, [isInView, animationControls]);
 
-  const scrollAnimationVariants = {
-    hidden: { x: -1500 },
-    visible: {
-      x: 0,
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-        bounce: 0.5,
-        delay: 0,
-      },
-    },
-  };
-
   const scrolltoTop = () => {
     scroll.scrollToTop({ smooth: true });
   };
 
   return (
-    <div
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate={animationControls}
       className="w-full mx-auto flex flex-col justify-center items-center"
       ref={ref}
     >
@@ -46,28 +36,40 @@ const Contacts = () => {
       <div className="w-full md:w-2/3 flex flex-col justify-center items-center ">
         <motion.div
           className="w-full items-center flex justify-center gap-6"
-          initial="hidden"
-          animate={animationControls}
-          variants={scrollAnimationVariants}
+          variants={itemVariants}
         >
           <SectionHeading title="Contact me" subTitle="LET’S CONNECT" />
         </motion.div>
       </div>
       {/* LEFT COLUMN */}
-      <div className="max-w-screen-xl px-6 md:px-0 mt-10 w-full flex flex-col md:flex-row">
+      <motion.div
+        initial="hidden"
+        animate={animationControls}
+        variants={containerVariants}
+        className="max-w-screen-xl px-6 md:px-0 mt-10 w-full flex flex-col md:flex-row"
+      >
         <div className="flex-1 flex flex-col justify-center bg-gradient-to-r from-sky-300/70 via-slate-50 to-fuchsia-300/70 relative overflow-hidden rounded-tl-[24px] rounded-tr-[24px] lg:rounded-tr-none px-6 py-10 lg:p-0 lg:rounded-tl-[24px] lg:rounded-bl-[24px] lg:rounded-bl-[24px">
-          <div className="flex flex-col relative z-10 px-4 lg:px-20 w-[100%] mx-auto space-y-8">
-            <h3 className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary">
+          <motion.div
+            variants={containerVariants}
+            className="flex flex-col relative z-10 px-4 lg:px-20 w-[100%] mx-auto space-y-8"
+          >
+            <motion.h3
+              variants={itemVariants}
+              className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary"
+            >
               Let's work together
-            </h3>
-            <p className="w-full font-outfit font-light">
+            </motion.h3>
+            <motion.p
+              variants={itemVariants}
+              className="w-full font-outfit font-light"
+            >
               Proin volutpat consequat porttitor cras nullam gravida at. Orci
               molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
               Arcu sed malesuada et magna.
-            </p>
+            </motion.p>
 
             {/* CONTACT INFO */}
-            <div className="gap-6 flex flex-col">
+            <motion.div variants={itemVariants} className="gap-6 flex flex-col">
               <div className="flex gap-4 items-center">
                 <CiLocationOn className="scale-150" />
                 <span>Sofia, Bulgaria</span>
@@ -89,13 +91,21 @@ const Contacts = () => {
                   />
                 </ScrollLink>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex-1 rounded-bl-[24px] rounded-br-[24px] lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none lg:rounded-tr-[24px] lg:rounded-br-[24px] rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 ">
-          <form className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <motion.div
+          initial="hidden"
+          animate={animationControls}
+          variants={containerVariants}
+          className="flex-1 rounded-bl-[24px] rounded-br-[24px] lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none lg:rounded-tr-[24px] lg:rounded-br-[24px] rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 "
+        >
+          <motion.form
+            variants={itemVariants}
+            className="mx-auto mt-16 max-w-xl sm:mt-20"
+          >
             <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2">
               <div>
                 <label
@@ -213,10 +223,10 @@ const Contacts = () => {
                 Submit
               </button>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
+          </motion.form>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

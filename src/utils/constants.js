@@ -51,7 +51,7 @@ export const educationData = [
     role: "Graphic Designer | UX/UI",
     skills: [
       "Design logotypes, web pages, banners, flyers, billboards, social media content, menus, woblers and more",
-      "Design brand identity for various Bulgarian companies - El Shisha, Vapy, Fitty.",
+      "Design brand identity for various Bulgarian companies El Shisha, Vapy, Fitty, Coolfit",
     ],
   },
   {
@@ -62,7 +62,7 @@ export const educationData = [
       "HTML, CSS, SASS",
       "JavaScript, JSX, React",
       "TailwindCSS, Zustand, Firebase, Git",
-      "Unit Tests, Class Components, CRUD"
+      "Unit Tests, Class Components, CRUD",
     ],
     achievements: "Passed SoftUni React JS 2023 Course with 6.00",
   },

@@ -37,24 +37,38 @@ const Header = () => {
     >
       <div className="w-full top-0 h-[4.5rem] border-white border-opacity-40 mx-auto flex items-center justify-between py-2 md:py-0">
         {/* Desktop Menu */}
-        <div className="hidden md:flex w-[90%] md:w-[50%] h-[48px] md:h-[56px] backdrop-blur-[0.5rem] rounded-full mx-auto justify-center items-center bg-gradient-to-r from-purple-900/60 via-primary/60 to-purple-800/60 shadow-lg">
-          <ul className="w-full flex justify-around px-4 font-outfit font-light text-white uppercase text-base cursor-pointer">
-            {["home", "about", "experience", "services", "projects", "contact"].map((section) => (
-              <li
-                key={section}
-                className={activeSession === section ? "font-bold" : ""}
-                onClick={() => scrollToSection(section)}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </li>
+        <div className="hidden md:flex w-[90%] px-4 md:w-[40%] h-[48px] md:h-[56px] backdrop-blur-[0.5rem] rounded-full mx-auto justify-center items-center bg-gradient-to-r from-purple-900/60 via-primary/60 to-purple-800/60 shadow-lg">
+          <ul className="w-full flex justify-around font-outfit font-light text-white uppercase text-base cursor-pointer">
+            {[
+              "home",
+              "about",
+              "experience",
+              "services",
+              "projects",
+              "contact",
+            ].map((section, index, array) => (
+              <React.Fragment key={section}>
+                <li
+                  className={activeSession === section ? "font-bold" : ""}
+                  onClick={() => scrollToSection(section)}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </li>
+                {index < array.length - 1 && (
+                  <div className="border-l border-white h-6"></div>
+                )}
+              </React.Fragment>
             ))}
           </ul>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center justify-end w-full px-4">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl text-white">
-            {menuOpen ? <FiX className="text-black" /> : <FiMenu className="text-black" size={28} />}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-2xl text-primary z-50"
+          >
+            {menuOpen ? <FiX size={32} /> : <FiMenu size={32} />}
           </button>
         </div>
       </div>
@@ -65,16 +79,26 @@ const Header = () => {
           initial={{ opacity: 0, x: "-100%" }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "-100%" }}
-          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white font-outfit text-xl uppercase z-40"
+          className="fixed inset-0 bg-secondary backdrop-blur-sm bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white font-outfit text-2xl uppercase z-40"
         >
-          {["home", "about", "experience", "services", "projects", "contact"].map((section) => (
-            <div
-              key={section}
-              className={`cursor-pointer ${activeSession === section ? "font-bold" : ""}`}
-              onClick={() => scrollToSection(section)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </div>
+          {[
+            "home",
+            "about",
+            "experience",
+            "services",
+            "projects",
+            "contact",
+          ].map((section, index, array) => (
+            <React.Fragment key={section}>
+              <div
+                className={`cursor-pointer ${
+                  activeSession === section ? "font-bold" : ""
+                }`}
+                onClick={() => scrollToSection(section)}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </div>
+            </React.Fragment>
           ))}
         </motion.div>
       )}

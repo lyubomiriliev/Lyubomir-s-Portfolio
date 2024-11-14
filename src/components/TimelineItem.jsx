@@ -10,7 +10,7 @@ const TimelineItem = ({
   achievements,
 }) => {
   return (
-    <div className="relative h-[300px] bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
+    <div className="relative h-[320px] lg:h-[250px] flex flex-col bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -31,20 +31,23 @@ const TimelineItem = ({
         </p>
         {role && <p className="text-gray-600 font-normal">{role}</p>}
         {achievements && (
-          <p className="text-gray-700 font-semibold mt-2">
-            {achievements}
-          </p>
+          <p className="text-gray-700 font-semibold mt-2">{achievements}</p>
         )}
         <div className="w-full flex flex-col mt-2 max-w-[400px]">
-          <h3 className="font-semibold text-gray-800">Skills Acquired:</h3>
-          <div className="w-full grid grid-cols-2">
-          {skills &&
-            skills.map((skill, index) => (
-              <span key={index} className="text-gray-600 max-w-[180px] font-light">
-                {skill}
-              </span>
-            ))}
-            </div>
+          <h3 className="font-semibold text-lg text-gray-800">
+            Skills Acquired:
+          </h3>
+          <div className="w-full grid grid-cols-2 text-left gap-3">
+            {skills &&
+              skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="text-gray-600 max-w-[180px] text-sm font-light"
+                >
+                  {skill}
+                </span>
+              ))}
+          </div>
         </div>
         <span className="mt-1 block text-lg font-semibold absolute right-4 bottom-4 text-primary">
           {years}

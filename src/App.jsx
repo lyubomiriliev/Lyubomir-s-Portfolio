@@ -11,6 +11,21 @@ import Services from "./components/Services";
 import Timeline from "./components/Timeline";
 
 const Layout = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
   return (
     <div>
       <div id="home"></div>
@@ -22,19 +37,34 @@ const Layout = () => {
         <TechStack />
       </div>
       <div id="about">
-        <AboutMe />
+        <AboutMe
+          containerVariants={containerVariants}
+          itemVariants={itemVariants}
+        />
       </div>
       <div id="experience">
-        <Timeline />
+        <Timeline
+          containerVariants={containerVariants}
+          itemVariants={itemVariants}
+        />
       </div>
       <div id="services">
-        <Services />
+        <Services
+          containerVariants={containerVariants}
+          itemVariants={itemVariants}
+        />
       </div>
       <div id="projects">
-        <Projects />
+        <Projects
+          containerVariants={containerVariants}
+          itemVariants={itemVariants}
+        />
       </div>
       <div id="contact">
-        <Contacts />
+        <Contacts
+          containerVariants={containerVariants}
+          itemVariants={itemVariants}
+        />
       </div>
       <div>
         <Footer />

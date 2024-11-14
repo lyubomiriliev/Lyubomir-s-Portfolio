@@ -3,7 +3,7 @@ import { aboutImage } from "../assets/logos";
 import { motion, useAnimation, useInView } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
-const AboutMe = () => {
+const AboutMe = ({ containerVariants, itemVariants }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animationControls = useAnimation();
@@ -13,21 +13,6 @@ const AboutMe = () => {
       animationControls.start("visible");
     }
   }, [isInView, animationControls]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-  };
 
   return (
     <div

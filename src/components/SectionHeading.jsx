@@ -6,7 +6,7 @@ const SectionHeading = ({ title, subTitle }) => {
       <h3 className="uppercase font-outfit font-light text-lg tracking-tight">
         {subTitle}
       </h3>
-      <h1 className="uppercase font-outfit font-bold text-4xl lg:text-6xl tracking-wide text-primary">
+      <h1 className="uppercase font-outfit font-bold text-5xl lg:text-6xl tracking-wide text-primary">
         {title}
       </h1>
     </div>

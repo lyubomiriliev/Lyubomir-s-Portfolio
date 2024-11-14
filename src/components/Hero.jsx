@@ -60,6 +60,18 @@ const Hero = () => {
     show: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
 
+  const imageAnimation = {
+    initial: { x: 500, opacity: 0 }, // Start from the left with opacity 0
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: window.innerWidth < 768 ? 0.8 : 1.5,
+        ease: "easeInOut",
+      }, // Smooth transition
+    },
+  };
+
   return (
     <>
       <div className="max-w-screen-xl 2xl:max-w-screen-xl mx-auto flex flex-col md:mt-20 md:flex-row items-center relative">
@@ -68,11 +80,11 @@ const Hero = () => {
           animate="show"
           variants={containerVariants}
         >
-          <div className="flex flex-col items-center md:items-start p-4 md:-mt-20 md:p-0 z-20">
+          <div className="flex flex-col items-center md:items-start p-2 md:-mt-20 md:p-0 z-20">
             <motion.div variants={itemVariants} initial="hidden" animate="show">
               <div onClick={scrolltoTop}>
                 <img
-                  className="w-52 md:w-80 ml-2 mb-5"
+                  className="w-64 md:w-80 ml-2 mb-5"
                   src={lyuboLogo}
                   alt="Logo"
                 />
@@ -80,10 +92,14 @@ const Hero = () => {
             </motion.div>
 
             <motion.h3
-              className="font-bold font-outfit text-5xl lg:text-5xl leading-tight uppercase text-center lg:text-left lg:pl-2 text-secondary"
+              className="font-bold flex flex-col justify-center items-start font-outfit text-[50px] lg:text-[51px] leading-tight uppercase text-center lg:text-left lg:pl-2 select-none text-secondary"
               variants={itemVariants}
             >
-              Front-End React Developer
+              <span className="pl-1">Front-End</span>
+              <span className="text-[94px] font-extrabold leading-[70px] tracking-tight text-primary">
+                React
+              </span>
+              <span className="pl-1">Developer</span>
             </motion.h3>
             <div className="hidden md:block">
               <motion.p
@@ -134,14 +150,19 @@ const Hero = () => {
             </div>
           </div>
         </motion.div>
-        <img
+        <motion.img
           className="w-full -mt-4 md:w-2/3 z-20"
           src={heroImagePNG4}
+          variants={imageAnimation}
+          initial="initial"
+          animate="animate"
           alt="Hero Image"
         />
         <motion.img
           className="w-full -mt-4 md:w-2/3 right-0 bottom-0 z-20 absolute"
           src={heroImageAnimate}
+          initial="initial"
+          animate="animate"
           alt="Hero Image"
           {...scrollAnimation}
         />

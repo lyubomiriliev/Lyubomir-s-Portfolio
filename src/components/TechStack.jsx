@@ -42,13 +42,8 @@ const TechStack = () => {
       </div>
 
       {/* MOBILE */}
-      <div className="w-full h-60 flex flex-col bg-gradient-to-r from-secondary to-purple-900 justify-center items-center md:hidden">
-        <div className="flex">
-          <h1 className="font-outfit font-bold text-3xl text-white">
-            Tech Stack
-          </h1>
-        </div>
-        <div className="w-[90%] grid grid-cols-6 mt-5 justify-center gap-4 h-40 items-center">
+      <div className="w-full py-4 flex flex-col bg-gradient-to-r from-secondary to-purple-900 justify-center items-center md:hidden">
+        <div className="w-full grid grid-cols-6 px-4 justify-center gap-4 items-center">
           {filteredLogos.map((logo, index) => (
             <motion.img
               key={index}
