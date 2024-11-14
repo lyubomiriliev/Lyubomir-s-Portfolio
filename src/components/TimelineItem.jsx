@@ -10,12 +10,12 @@ const TimelineItem = ({
   achievements,
 }) => {
   return (
-    <div className="relative w-full">
+    <div className="relative h-[300px] bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="absolute -top-0 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary bg-white"
+        className="absolute top-6 left-6 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary"
       >
         <path
           fillRule="evenodd"
@@ -23,7 +23,7 @@ const TimelineItem = ({
           clipRule="evenodd"
         />
       </svg>
-      <div className="ml-6">
+      <div className="ml-8">
         <h4 className="font-bold text-primary uppercase text-xl">{title}</h4>
         <p className="text-gray-600 text-sm md:text-base font-medium">
           {location}{" "}
@@ -32,19 +32,21 @@ const TimelineItem = ({
         {role && <p className="text-gray-600 font-normal">{role}</p>}
         {achievements && (
           <p className="text-gray-700 font-semibold mt-2">
-            Achievements: {achievements}
+            {achievements}
           </p>
         )}
-        <ul className="list-disc list-inside mt-2 max-w-[400px]">
+        <div className="w-full flex flex-col mt-2 max-w-[400px]">
           <h3 className="font-semibold text-gray-800">Skills Acquired:</h3>
+          <div className="w-full grid grid-cols-2">
           {skills &&
             skills.map((skill, index) => (
-              <li key={index} className="text-gray-600 font-light list-none">
+              <span key={index} className="text-gray-600 max-w-[180px] font-light">
                 {skill}
-              </li>
+              </span>
             ))}
-        </ul>
-        <span className="mt-1 block text-lg font-semibold text-primary">
+            </div>
+        </div>
+        <span className="mt-1 block text-lg font-semibold absolute right-4 bottom-4 text-primary">
           {years}
         </span>
       </div>

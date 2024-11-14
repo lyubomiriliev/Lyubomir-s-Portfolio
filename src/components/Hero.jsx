@@ -68,7 +68,7 @@ const Hero = () => {
           animate="show"
           variants={containerVariants}
         >
-          <div className="flex flex-col items-center md:items-start p-4 mt-16 md:-mt-20 md:p-0 z-20">
+          <div className="flex flex-col items-center md:items-start p-4 md:-mt-20 md:p-0 z-20">
             <motion.div variants={itemVariants} initial="hidden" animate="show">
               <div onClick={scrolltoTop}>
                 <img
