@@ -9,6 +9,7 @@ import {
 } from "../assets/logos";
 import { motion } from "framer-motion";
 import Button from "./Button";
+import { scroller } from "react-scroll";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -22,6 +23,14 @@ const Hero = () => {
 
   const scrolltoTop = () => {
     scroll.scrollToTop({ smooth: true });
+  };
+
+  const scrollToPortfolio = () => {
+    scroller.scrollTo("projects", {
+      smooth: true,
+      duration: 600, // Adjust the duration as needed
+      offset: -80, // Adjust offset based on header height
+    });
   };
 
   const scrollAnimation = {
@@ -71,7 +80,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.h3
-              className="font-bold font-outfit text-5xl lg:text-5xl leading-tight text-center lg:text-left lg:pl-2 text-secondary"
+              className="font-bold font-outfit text-5xl lg:text-5xl leading-tight uppercase text-center lg:text-left lg:pl-2 text-secondary"
               variants={itemVariants}
             >
               Front-End React Developer
@@ -88,9 +97,9 @@ const Hero = () => {
                 variants={itemVariants}
                 className="flex items-center w-full py-4 pl-3 gap-4"
               >
-                <Button handleDownload={handleDownload} button="Download Cv" />
+                <Button handleClick={handleDownload} button="Download Cv" />
                 <Button
-                  handleDownload={handleDownload}
+                  handleClick={scrollToPortfolio}
                   button="See my work"
                   variant="outline"
                 />

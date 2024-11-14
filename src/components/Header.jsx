@@ -1,15 +1,16 @@
-import React from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-
+import React, { useState } from "react";
+import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 
-const Header = ({ activeSession, onSectionClick }) => {
+const Header = () => {
+  const [activeSession, setActiveSession] = useState("home");
+
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // Delay between each child animation
+        staggerChildren: 0.3,
       },
     },
   };
@@ -17,6 +18,26 @@ const Header = ({ activeSession, onSectionClick }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 1.5 } },
+  };
+
+  const SCROLL_DURATION = 600;
+  const HEADER_OFFSET = -80;
+
+  const scrollToSection = (section) => {
+    setActiveSession(section);
+
+    if (section === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      scroller.scrollTo(section, {
+        smooth: true,
+        duration: SCROLL_DURATION,
+        offset: HEADER_OFFSET,
+      });
+    }
   };
 
   return (
@@ -31,40 +52,32 @@ const Header = ({ activeSession, onSectionClick }) => {
           <ul className="w-full flex justify-around px-4 font-outfit font-light text-white uppercase text-base md:text-xl cursor-pointer">
             <li
               className={activeSession === "home" ? "font-bold" : ""}
-              onClick={() => onSectionClick("home")}
+              onClick={() => scrollToSection("home")}
             >
-              <ScrollLink to="home" smooth={true} duration={400}>
-                Home
-              </ScrollLink>
+              Home
             </li>
             <div className="border-r-2"></div>
             <li
               className={activeSession === "about" ? "font-bold" : ""}
-              onClick={() => onSectionClick("about")}
+              onClick={() => scrollToSection("about")}
             >
-              <ScrollLink to="about" smooth={true} duration={400}>
-                About
-              </ScrollLink>
+              About
             </li>
             <div className="border-r-2"></div>
 
             <li
               className={activeSession === "projects" ? "font-bold" : ""}
-              onClick={() => onSectionClick("projects")}
+              onClick={() => scrollToSection("projects")}
             >
-              <ScrollLink to="projects" smooth={true} duration={400}>
-                Projects
-              </ScrollLink>
+              Projects
             </li>
             <div className="border-r-2"></div>
 
             <li
               className={activeSession === "contact" ? "font-bold" : ""}
-              onClick={() => onSectionClick("contact")}
+              onClick={() => scrollToSection("contact")}
             >
-              <ScrollLink to="contact" smooth={true} duration={400}>
-                Contact
-              </ScrollLink>
+              Contact
             </li>
           </ul>
         </div>

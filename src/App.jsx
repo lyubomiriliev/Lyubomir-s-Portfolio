@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import AboutMe from "./components/AboutMe";
 import Contacts from "./components/Contacts";
 import Header from "./components/Header";
@@ -11,75 +10,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
 
-const Layout = ({ initialSection }) => {
-  const [activeSession, setActiveSession] = useState("home");
-
-  const handleSectionClick = (section) => {
-    setActiveSession(section);
-    const sectionElement = document.getElementById(section);
-    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
-
-    if (section === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else if (sectionElement) {
-      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
-      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
-    }
-    window.history.replaceState(null, null, `/${section}`);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const headerHeight = document.querySelector("header")?.offsetHeight || 0;
-      const sections = ["home", "about", "projects", "contact"];
-      const sectionOffsets = sections.map((section) => ({
-        id: section,
-        offset: document.getElementById(section).offsetTop - headerHeight - 20,
-      }));
-
-      const activeSection = sectionOffsets.find((section, index) => {
-        const nextSection = sectionOffsets[index + 1];
-        return (
-          scrollPosition >= section.offset &&
-          (!nextSection || scrollPosition < nextSection.offset)
-        );
-      });
-
-      if (activeSection && activeSection.id !== activeSession) {
-        setActiveSession(activeSection.id);
-        window.history.replaceState(null, null, `/${activeSection.id}`);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [activeSession]);
-
-  useEffect(() => {
-    const section =
-      initialSection || window.location.pathname.replace("/", "") || "home";
-    const sectionElement = document.getElementById(section);
-    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
-
-    if (section === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else if (sectionElement) {
-      const sectionOffset = sectionElement.offsetTop - headerHeight - 20;
-      window.scrollTo({ top: sectionOffset, behavior: "smooth" });
-      setActiveSession(section);
-    }
-  }, [initialSection]);
-
+const Layout = () => {
   return (
     <div>
       <div id="home"></div>
-      <Header
-        activeSession={activeSession}
-        onSectionClick={handleSectionClick}
-      />
+      <Header />
       <div>
         <Hero />
       </div>

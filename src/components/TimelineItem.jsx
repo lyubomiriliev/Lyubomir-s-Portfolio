@@ -15,7 +15,7 @@ const TimelineItem = ({
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="absolute -top-0 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary bg-slate-200 shadow-md"
+        className="absolute -top-0 z-10 -ml-3.5 h-8 w-7 rounded-full text-primary bg-white"
       >
         <path
           fillRule="evenodd"

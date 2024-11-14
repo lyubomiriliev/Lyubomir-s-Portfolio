@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ button, handleDownload, variant = "primary" }) => {
+const Button = ({ button, handleClick, variant = "primary" }) => {
   const baseStyles =
     "font-outfit font-bold text-lg px-4 py-3 rounded-full uppercase";
 
@@ -13,7 +13,7 @@ const Button = ({ button, handleDownload, variant = "primary" }) => {
   };
 
   return (
-    <div onClick={handleDownload}>
+    <div onClick={handleClick}>
       <button className={`${baseStyles} ${variantStyles[variant]}`}>
         {button}
       </button>
