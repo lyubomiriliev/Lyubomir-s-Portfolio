@@ -4,6 +4,7 @@ import heroTitlePNG from "../logos/heroTitlePNG.png";
 import heroImagePNG from "../logos/heroImagePNG.png";
 import heroImagePNG2 from "../logos/heroImagePNG2.png";
 import heroImagePNG3 from "../logos/heroImagePNG3.png";
+import heroImagePNG4 from "../logos/heroImagePNG4.png";
 import heroImage from "../logos/portfolio1.svg";
 import linkedinSecondary from "../logos/linkedinpurple.png";
 import githubSecondary from "../logos/github.png";
@@ -47,6 +48,7 @@ import heroImageAnimate from "../logos/heroImageAnimate.png";
 import stripeLogo from "../logos/stripeLogo.svg";
 import nextJS2 from "../logos/nextJS2.svg";
 import reduxLogo2 from "../logos/reduxLogo2.svg";
+import vdLogo from "../logos/vdLogo.png";
 
 import problemSolving from "../logos/problemSolving.png";
 import detail from "../logos/detail.png";
@@ -94,6 +96,7 @@ export {
   reduxLogo,
   heroImageAnimate,
   heroImagePNG3,
+  heroImagePNG4,
   stripeLogo,
   nextJS2,
   reduxLogo2,
@@ -103,6 +106,7 @@ export {
   collab,
   learn,
   task,
+  vdLogo,
 };
 
 export const techStackLogos = [

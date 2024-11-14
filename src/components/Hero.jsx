@@ -3,9 +3,7 @@ import {
   githubSecondary,
   heroBlur,
   heroImageAnimate,
-  heroImagePNG2,
-  heroImagePNG3,
-  heroTitle,
+  heroImagePNG4,
   linkedinSecondary,
   lyuboLogo,
 } from "../assets/logos";
@@ -38,63 +36,98 @@ const Hero = () => {
     },
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delay between each child animation
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   return (
     <>
-      <div className="max-w-screen-xl 2xl:max-w-screen-2xl mx-auto flex flex-col md:mt-20 md:flex-row items-center relative">
-        <div className="flex flex-col items-center md:items-start p-4 mt-16 md:-mt-20 md:p-0 z-20">
-          <div onClick={scrolltoTop}>
-            <img
-              className="w-52 md:w-80 ml-2 mb-5"
-              src={lyuboLogo}
-              alt="Logo"
-            />
-          </div>
-          <h3 className="font-bold font-outfit text-5xl lg:text-6xl leading-tight text-center lg:text-left lg:pl-2 text-secondary">
-            Front-End React Developer
-          </h3>
-          <div className="hidden md:block">
-            {/* <div className="w-1/4 md:w-1/3 ml-4 mt-2 h-[2px] bg-secondary"></div> */}
-            <p className="w-3/4 md:w-2/4 ml-4 mt-8 text-primary font-outfit font-light text-lg">
-              Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus
-              semper tortor mauris porta.
-            </p>
-            <div className="flex items-center w-full py-4 pl-3 gap-4">
-              <Button handleDownload={handleDownload} button="Download Cv" />
-              <Button
-                handleDownload={handleDownload}
-                button="See my work"
-                variant="outline"
-              />
-            </div>
-            <div className="flex justify-start items-center mt-3 ml-4 gap-4">
-              <a
-                href="https://www.linkedin.com/in/lyubomir-iliev-37ab32305/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+      <div className="max-w-screen-xl 2xl:max-w-screen-xl mx-auto flex flex-col md:mt-20 md:flex-row items-center relative">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={containerVariants}
+        >
+          <div className="flex flex-col items-center md:items-start p-4 mt-16 md:-mt-20 md:p-0 z-20">
+            <motion.div variants={itemVariants} initial="hidden" animate="show">
+              <div onClick={scrolltoTop}>
                 <img
-                  className="w-10 md:w-14 hover:scale-110 duration-300"
-                  src={linkedinSecondary}
-                  alt="linkedin logo"
+                  className="w-52 md:w-80 ml-2 mb-5"
+                  src={lyuboLogo}
+                  alt="Logo"
                 />
-              </a>
-              <a
-                href="https://github.com/lyubomiriliev"
-                target="_blank"
-                rel="noopener noreferrer"
+              </div>
+            </motion.div>
+
+            <motion.h3
+              className="font-bold font-outfit text-5xl lg:text-5xl leading-tight text-center lg:text-left lg:pl-2 text-secondary"
+              variants={itemVariants}
+            >
+              Front-End React Developer
+            </motion.h3>
+            <div className="hidden md:block">
+              <motion.p
+                variants={itemVariants}
+                className="w-3/4 md:w-full ml-2 mt-8 text-primary font-outfit font-light text-lg"
               >
-                <img
-                  className="w-10 md:w-14 hover:scale-110 duration-300"
-                  src={githubSecondary}
-                  alt="github logo"
+                Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus
+                semper tortor mauris porta.
+              </motion.p>
+              <motion.div
+                variants={itemVariants}
+                className="flex items-center w-full py-4 pl-3 gap-4"
+              >
+                <Button handleDownload={handleDownload} button="Download Cv" />
+                <Button
+                  handleDownload={handleDownload}
+                  button="See my work"
+                  variant="outline"
                 />
-              </a>
+              </motion.div>
+              <motion.div
+                variants={itemVariants}
+                className="flex justify-start items-center mt-3 ml-4 gap-4"
+              >
+                <a
+                  href="https://www.linkedin.com/in/lyubomir-iliev-37ab32305/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="w-10 md:w-14 hover:scale-110 duration-300"
+                    src={linkedinSecondary}
+                    alt="linkedin logo"
+                  />
+                </a>
+                <a
+                  href="https://github.com/lyubomiriliev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="w-10 md:w-14 hover:scale-110 duration-300"
+                    src={githubSecondary}
+                    alt="github logo"
+                  />
+                </a>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <img
           className="w-full -mt-4 md:w-2/3 z-20"
-          src={heroImagePNG3}
+          src={heroImagePNG4}
           alt="Hero Image"
         />
         <motion.img

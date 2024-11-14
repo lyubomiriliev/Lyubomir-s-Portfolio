@@ -1,4 +1,4 @@
-import { problemSolving } from "../assets/logos";
+import { problemSolving, vdLogo } from "../assets/logos";
 import { detail } from "../assets/logos";
 import { creative } from "../assets/logos";
 import { collab } from "../assets/logos";
@@ -157,7 +157,7 @@ export const skillsDevAfter = [
 
 export const projectsData = [
   {
-    logoSrc: hilinkLogo,
+    logoSrc: vdLogo,
     title: "Vyara Digital",
     subTitle: "Portfolio Website",
     description:
