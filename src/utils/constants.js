@@ -169,7 +169,7 @@ export const projectsData = [
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
-    webLink: "https://pop-shot-social-media-website.web.app/",
+    webLink: "https://vyaradigital.vercel.app/",
     sourceCode: "https://github.com/lyubomiriliev/Travel-App-NextJS",
     techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
   },
@@ -220,7 +220,7 @@ export const projectsData = [
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
-    webLink: "https://app.bse-mobility.eu/",
+    webLink: "https://nextshopp.vercel.app/women",
     sourceCode: "https://github.com/lyubomiriliev/N3XT-E-commerce-Website",
     techStack: [
       "JavaScript",
