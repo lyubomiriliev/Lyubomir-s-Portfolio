@@ -197,7 +197,7 @@ export const projectsData = [
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies:
       "#NextJS #TypeScript #TailwindCSS #FramerMotion #Vercel #i18next",
-    imgSrc: "/vyaradigital.png",
+    imgSrc: "/virtuoso.png",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
