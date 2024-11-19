@@ -10,7 +10,7 @@ const ProjectBlur = ({
   logoSrc,
 }) => {
   return (
-    <div className="absolute inset-0 mb-24 lg:mb-14 flex flex-col items-center justify-center gap-6 text-white opacity-0 backdrop-blur-xl rounded-lg transition-opacity duration-500 group-hover:opacity-100">
+    <div className="absolute inset-0 lg:mb-0 flex flex-col items-center justify-start pt-10 lg:pt-24 gap-6 bg-gray-800/20 text-white opacity-0 backdrop-blur-xl rounded-lg transition-opacity duration-500 group-hover:opacity-100">
       <div className="flex items-center gap-4 w-full justify-center">
         <img src={logoSrc} alt={title} width={48} className="object-cover" />
         <h3 className="text-base md:text-xl font-outfit font-bold uppercase">

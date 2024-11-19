@@ -164,7 +164,7 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#NextJs #TypeScript #TailwindCSS #Vercel #FramerMotion",
-    imgSrc: hilinkImg,
+    imgSrc: "/vyaradigital.png",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -180,7 +180,7 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#react #javascript #tailwindcss #firebase #i18next",
-    imgSrc: bsemImg,
+    imgSrc: "/bsem.png",
     primaryButtonLabel: "Website",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -197,7 +197,7 @@ export const projectsData = [
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies:
       "#NextJS #TypeScript #TailwindCSS #FramerMotion #Vercel #i18next",
-    imgSrc: virtuosoImg,
+    imgSrc: "/vyaradigital.png",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -215,7 +215,7 @@ export const projectsData = [
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies:
       "#react #javascript #tailwindcss #vercel #redux #toastify #stripe",
-    imgSrc: nextImg,
+    imgSrc: "/nextshop.png",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -238,7 +238,7 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#react #javascript #css #sass #firebase",
-    imgSrc: popshotImg,
+    imgSrc: "/vyaradigital.png",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -255,7 +255,7 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#React #JavaScript #TailwindCSS #i18next",
-    imgSrc: discoveryImg,
+    imgSrc: "/discovery.png",
     primaryButtonLabel: "Website",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "",
