@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center mt-8 border-t border-white/20 w-full pt-4">
         <p className="text-xs md:text-sm">
-          &copy; 2024 Lyubo. All rights reserved.
+          &copy; {new Date().getFullYear()} Lyubomir.Dev. All rights reserved.
         </p>
       </div>
     </footer>
