@@ -202,7 +202,7 @@ export const projectsData = [
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
-    webLink: "https://pop-shot-social-media-website.web.app/",
+    webLink: "https://virtuoso-barbershop.vercel.app/",
     sourceCode:
       "https://github.com/lyubomiriliev/PopShot-Social-Media-SOFTUNI-2023-",
     techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
