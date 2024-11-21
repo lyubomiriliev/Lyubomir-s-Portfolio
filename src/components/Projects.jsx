@@ -43,6 +43,7 @@ const Projects = ({ containerVariants, itemVariants }) => {
               description={project.description}
               technologies={project.technologies}
               imgSrc={project.imgSrc}
+              mobileImg={project.mobileImg}
               primaryButtonLabel={project.primaryButtonLabel}
               secondaryButtonLabel={project.secondaryButtonLabel}
               testAccEmail={project.testAccEmail}

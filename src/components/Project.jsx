@@ -9,6 +9,7 @@ const Project = ({
   subTitle,
   description,
   imgSrc,
+  mobileImg,
   primaryButtonLabel,
   secondaryButtonLabel,
   testAccEmail,
@@ -26,6 +27,13 @@ const Project = ({
       <div className="w-full flex flex-col justify-around rounded-[24px] bg-gradient-to-r from-slate-200 via-slate-50 to-slate-200 overflow-hidden relative select-none">
         <div className="flex justify-center items-center p-2">
           <img src={imgSrc} alt={title} className="w-[75%] mt-6 select-none" />
+        </div>
+        <div>
+          <img
+            src={mobileImg}
+            alt={title}
+            className="w-36 select-none absolute top-28 right-2"
+          />
         </div>
         <a href={webLink} target="_blank" rel="noopener noreferrer">
           <ProjectBlur
