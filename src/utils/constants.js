@@ -158,6 +158,7 @@ export const skillsDevAfter = [
 
 export const projectsData = [
   {
+    id: 1,
     logoSrc: vdLogo,
     title: "Vyara Digital",
     subTitle: "Portfolio Website",
@@ -175,6 +176,7 @@ export const projectsData = [
     techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
   },
   {
+    id: 2,
     logoSrc: blackSea,
     title: "BlackSea Electromobility",
     subTitle: "EV CHARGING STATIONS WEBSITE",
@@ -192,6 +194,7 @@ export const projectsData = [
     techStack: ["JavaScript", "React", "TailwindCSS", "Firebase", "Figma"],
   },
   {
+    id: 3,
     logoSrc: virtuosoLogoIcon,
     title: "Virtuoso Barbershop",
     subTitle: "barber shop website",
@@ -211,6 +214,7 @@ export const projectsData = [
     techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
   },
   {
+    id: 4,
     logoSrc: nextLogo,
     title: "Next Apparel",
     subTitle: "E-COMMERCE WEBSITE",
@@ -236,6 +240,7 @@ export const projectsData = [
     ],
   },
   {
+    id: 5,
     logoSrc: popShotLogo,
     title: "Popshot",
     subTitle: "SOCIAL MEDIA WEBSITE",
@@ -254,6 +259,7 @@ export const projectsData = [
     techStack: ["JavaScript", "React", "Css", "Sass", "Firebase", "Figma"],
   },
   {
+    id: 6,
     logoSrc: discoveryLogo,
     title: "DiscoveryBG",
     subTitle: "Tourism Booking Website",

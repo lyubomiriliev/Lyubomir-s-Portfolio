@@ -1,5 +1,4 @@
 import React from "react";
-import { projectBG } from "../assets/logos";
 import { techStackLogos } from "../assets/logos";
 import ProjectBlur from "./ProjectBlur";
 
