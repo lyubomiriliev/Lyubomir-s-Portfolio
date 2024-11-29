@@ -85,7 +85,7 @@ const Contacts = ({ containerVariants, itemVariants }) => {
               variants={itemVariants}
               className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary"
             >
-              Let's work together
+              Let&apos;s work together
             </motion.h3>
             <motion.p
               variants={itemVariants}
