@@ -8,8 +8,36 @@ import { HiOutlinePhone } from "react-icons/hi2";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+import axios from "axios";
 
 const Contacts = ({ containerVariants, itemVariants }) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      firstName: e.target["first-name"].value,
+      lastName: e.target["last-name"].value,
+      company: e.target["company"].value,
+      email: e.target["email"].value,
+      phone: e.target["phone-number"].value,
+      message: e.target["message"].value,
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:7000/send-email",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Your message has been sent!");
+        e.target.reset();
+      }
+    } catch (error) {
+      console.error("Error sending email", error);
+      alert("Failed to send your message. Please try again.");
+    }
+  };
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const animationControls = useAnimation();
@@ -103,10 +131,12 @@ const Contacts = ({ containerVariants, itemVariants }) => {
           className="flex-1 rounded-bl-[24px] rounded-br-[24px] lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none lg:rounded-tr-[24px] lg:rounded-br-[24px] rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 "
         >
           <motion.form
+            onSubmit={handleSubmit}
             variants={itemVariants}
             className="mx-auto mt-16 max-w-xl sm:mt-20"
           >
             <div className="w-full mx-auto grid grid-cols-1 md:grid-grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2">
+              {/* First name */}
               <div>
                 <label
                   htmlFor="first-name"
@@ -119,11 +149,12 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                     id="first-name"
                     name="first-name"
                     type="text"
-                    autoComplete="given-name"
+                    required
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+              {/* Last name */}
               <div>
                 <label
                   htmlFor="last-name"
@@ -136,11 +167,12 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                     id="last-name"
                     name="last-name"
                     type="text"
-                    autoComplete="family-name"
+                    required
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+              {/* Company */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="company"
@@ -153,11 +185,11 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                     id="company"
                     name="company"
                     type="text"
-                    autoComplete="organization"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+              {/* Email */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="email"
@@ -169,12 +201,13 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                   <input
                     id="email"
                     name="email"
+                    required
                     type="email"
-                    autoComplete="email"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+              {/* Phone number */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="phone-number"
@@ -192,11 +225,11 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                     id="phone-number"
                     name="phone-number"
                     type="tel"
-                    autoComplete="tel"
                     className="block w-full rounded-md border-0 px-3.5 py-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+              {/* Message */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
@@ -215,6 +248,7 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 </div>
               </div>
             </div>
+            {/* Submit button */}
             <div className="mt-10 mx-auto flex justify-center">
               <button
                 type="submit"
