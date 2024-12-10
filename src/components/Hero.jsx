@@ -184,7 +184,7 @@ const Hero = () => {
         alt="Hero Background"
         className="absolute top-0 left-0 -z-20 w-full h-full object-cover opacity-80"
       />
-      <div>
+      <div className="sticky">
         <TechStack />
       </div>
     </>
