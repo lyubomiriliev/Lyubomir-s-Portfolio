@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import Button from "./Button";
 import { scroller } from "react-scroll";
+import TechStack from "./TechStack";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -183,6 +184,9 @@ const Hero = () => {
         alt="Hero Background"
         className="absolute top-0 left-0 -z-20 w-full h-full object-cover opacity-80"
       />
+      <div>
+        <TechStack />
+      </div>
     </>
   );
 };

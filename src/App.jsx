@@ -39,9 +39,6 @@ const Layout = () => {
       <div>
         <Hero />
       </div>
-      <div>
-        <TechStack />
-      </div>
       <div id="about">
         <AboutMe
           containerVariants={containerVariants}
