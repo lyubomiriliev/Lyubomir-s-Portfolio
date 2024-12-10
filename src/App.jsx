@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
+import { easeOut } from "framer-motion";
 
 const Layout = () => {
   const containerVariants = {
@@ -22,8 +23,12 @@ const Layout = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, easeOut },
+    },
   };
 
   return (

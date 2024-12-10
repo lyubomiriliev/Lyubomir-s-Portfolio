@@ -46,9 +46,10 @@ const Hero = () => {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0 },
     show: {
       opacity: 1,
+      scale: 1,
       transition: {
         staggerChildren: 0.3, // Delay between each child animation
       },
@@ -56,17 +57,27 @@ const Hero = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1 } },
+    hidden: { opacity: 0, y: 100 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  const titleVariant = {
+    hidden: { opacity: 0, scale: 0.7 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.2, ease: "easeInOut" },
+    },
   };
 
   const imageAnimation = {
-    initial: { x: 500, opacity: 0 }, // Start from the left with opacity 0
+    initial: { scale: 0.9, y: 35, opacity: 0 },
     animate: {
-      x: 0,
+      y: 0,
+      scale: 1,
       opacity: 1,
       transition: {
-        duration: window.innerWidth < 768 ? 0.8 : 1.5,
+        duration: 1,
         ease: "easeInOut",
       }, // Smooth transition
     },
@@ -81,7 +92,7 @@ const Hero = () => {
           variants={containerVariants}
         >
           <div className="flex flex-col items-center md:items-start p-2 md:-mt-20 md:p-0 z-20">
-            <motion.div variants={itemVariants} initial="hidden" animate="show">
+            <motion.div variants={titleVariant} initial="hidden" animate="show">
               <div onClick={scrolltoTop}>
                 <img
                   className="w-64 md:w-80 ml-2 mb-5"
@@ -93,7 +104,7 @@ const Hero = () => {
 
             <motion.h3
               className="font-bold flex flex-col justify-center items-start font-outfit text-[50px] lg:text-[51px] leading-tight uppercase text-center lg:text-left lg:pl-2 select-none text-secondary"
-              variants={itemVariants}
+              variants={titleVariant}
             >
               <span className="pl-1">Front-End</span>
               <span className="text-[94px] font-extrabold leading-[70px] tracking-tight text-primary">
