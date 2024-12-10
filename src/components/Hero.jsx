@@ -72,7 +72,7 @@ const Hero = () => {
   };
 
   const imageAnimation = {
-    initial: { scale: 0.9, y: 35, opacity: 0 },
+    initial: { scale: 0.5, y: 170, opacity: 0 },
     animate: {
       y: 0,
       scale: 1,
