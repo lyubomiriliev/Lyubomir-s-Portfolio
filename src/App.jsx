@@ -9,25 +9,26 @@ import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
-import { easeOut } from "framer-motion";
 
 const Layout = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
+      scale: 1,
       transition: {
+        duration: 1,
         staggerChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, easeOut },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
@@ -60,10 +61,7 @@ const Layout = () => {
         />
       </div>
       <div id="projects">
-        <Projects
-          containerVariants={containerVariants}
-          itemVariants={itemVariants}
-        />
+        <Projects />
       </div>
       <div id="contact">
         <Contacts

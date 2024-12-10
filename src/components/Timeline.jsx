@@ -20,11 +20,7 @@ const Timeline = ({ containerVariants, itemVariants }) => {
       ref={ref}
       className="w-full lg:w-2/3 flex flex-col gap-8 mx-auto h-full justify-start px-6 lg:px-2 py-10"
     >
-      <motion.div
-        variants={itemVariants}
-        initial="hidden"
-        animate={animationControls}
-      >
+      <div animate={animationControls}>
         <SectionHeading
           title="Education & Experience"
           subTitle="Journey Roadmap"
@@ -49,7 +45,7 @@ const Timeline = ({ containerVariants, itemVariants }) => {
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 };

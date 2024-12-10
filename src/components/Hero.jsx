@@ -58,7 +58,7 @@ const Hero = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 100 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
   const titleVariant = {

@@ -14,6 +14,11 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
     }
   }, [isInView, animationControls]);
 
+  const aboutVariant = {
+    hidden: { opacity: 0, x: 400 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  };
+
   return (
     <div
       className="w-full mx-auto flex flex-col justify-center items-center py-4 lg:py-10"
@@ -26,14 +31,11 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
         animate={animationControls}
       >
         {/* Text and Heading Section */}
-        <motion.div
-          className="w-[90%] md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-start py-10 items-center"
-          variants={itemVariants}
-        >
+        <div className="w-[90%] md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-start py-10 items-center">
           <SectionHeading title="About me" subTitle="get to know me" />
           <motion.p
             className="w-full md:w-2/3 text-center md:text-justify font-outfit font-light mt-8"
-            variants={itemVariants}
+            variants={aboutVariant}
           >
             Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper
             tortor mauris porta mi viverra tellus. Quisque interdum dui etiam
@@ -43,7 +45,7 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
             viverra tellus. Quisque interdum dui etiam laoreet sed. Sed mauris
             eget mi eget.
           </motion.p>
-        </motion.div>
+        </div>
 
         {/* Image Section */}
         <motion.div

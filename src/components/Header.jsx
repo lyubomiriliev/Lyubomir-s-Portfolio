@@ -29,24 +29,10 @@ const Header = () => {
     }
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: -200, scale: 0 },
-    show: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <motion.div
       initial="hidden"
       animate="show"
-      variants={containerVariants}
       className="w-full flex flex-col md:flex-row h-26 md:h-20 fixed top-0 z-50"
     >
       <div className="w-full top-0 h-[4.5rem] border-white border-opacity-40 mx-auto flex items-center justify-between py-2 md:py-0">

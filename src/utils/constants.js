@@ -173,7 +173,13 @@ export const projectsData = [
     testAccPw: "test123",
     webLink: "https://vyaradigital.vercel.app/",
     sourceCode: "https://github.com/lyubomiriliev/Travel-App-NextJS",
-    techStack: ["TypeScript", "NextJs2", "TailwindCSS", "Figma"],
+    techStack: [
+      "TypeScript",
+      "NextJs2",
+      "TailwindCSS",
+      "Figma",
+      "FramerMotion",
+    ],
   },
   {
     id: 2,
@@ -233,6 +239,7 @@ export const projectsData = [
     techStack: [
       "JavaScript",
       "React",
+      "Firebase",
       "Redux2",
       "TailwindCSS",
       "Stripe",

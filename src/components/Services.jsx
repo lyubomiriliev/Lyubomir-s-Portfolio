@@ -21,14 +21,14 @@ const Services = ({ containerVariants, itemVariants }) => {
       ref={ref}
       className="w-full max-w-screen-xl 2xl:max-w-screen-2xl flex flex-col items-center justify-center mx-auto py-10"
     >
-      <motion.div
+      <div
         className="w-full md:w-2/3 flex flex-col justify-center items-center"
         initial="hidden"
         animate={animationControls} // Control animation using animationControls
         variants={containerVariants}
       >
         <SectionHeading title="services" subTitle="What i provide" />
-      </motion.div>
+      </div>
 
       <motion.div
         variants={containerVariants}
@@ -48,23 +48,17 @@ const Services = ({ containerVariants, itemVariants }) => {
           <ServiceCardDesign />
         </motion.div>
       </motion.div>
-      <motion.h1
-        className="text-3xl text-secondary font-outfit font-bold py-6 uppercase"
-        variants={itemVariants}
-        initial="hidden"
-        animate={animationControls}
-      >
+      <h1 className="text-3xl text-secondary font-outfit font-bold py-6 uppercase">
         Personal Skills
-      </motion.h1>
+      </h1>
       <motion.div
-        variants={containerVariants}
+        variants={itemVariants}
         initial="hidden"
         animate={animationControls}
         className="w-full max-w-screen-xl text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-4 px-4 lg:px-20"
       >
         {softSkills.map((skill, index) => (
-          <motion.div
-            variants={itemVariants}
+          <div
             key={index}
             className="w-full flex lg:justify-center items-center bg-gradient-to-r from-primary/90 via-primary/60 to-primary/50 rounded-[24px] text-white px-2 py-2 gap-2"
           >
@@ -76,7 +70,7 @@ const Services = ({ containerVariants, itemVariants }) => {
             <span className="font-outfit font-light text-xl  uppercase ">
               {skill.name}
             </span>
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </section>
