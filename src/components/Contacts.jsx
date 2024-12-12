@@ -9,20 +9,20 @@ import { HiOutlinePhone } from "react-icons/hi2";
 import { motion, useAnimation, useInView } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import axios from "axios";
+import { contactFormSchema } from "../utils/contactSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import Button from "./Button";
 
 const Contacts = ({ containerVariants, itemVariants }) => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm({ resolver: zodResolver(contactFormSchema) });
 
-    const formData = {
-      firstName: e.target["first-name"].value,
-      lastName: e.target["last-name"].value,
-      company: e.target["company"].value,
-      email: e.target["email"].value,
-      phone: e.target["phone-number"].value,
-      message: e.target["message"].value,
-    };
-
+  const onSubmit = async (formData) => {
     try {
       const response = await axios.post(
         "http://localhost:7000/send-email",
@@ -30,11 +30,13 @@ const Contacts = ({ containerVariants, itemVariants }) => {
       );
       if (response.status === 200) {
         alert("Your message has been sent!");
-        e.target.reset();
+        reset();
+      } else {
+        throw new Error("Error sending email");
       }
     } catch (error) {
-      console.error("Error sending email", error);
-      alert("Failed to send your message. Please try again.");
+      console.error("Network Error:", error);
+      alert("Error", "Email failed to send. Please try again.");
     }
   };
 
@@ -131,7 +133,7 @@ const Contacts = ({ containerVariants, itemVariants }) => {
           className="flex-1 rounded-bl-[24px] rounded-br-[24px] lg:rounded-tl-none lg:rounded-bl-none p-4 md:p-0 rounded-tr-none lg:rounded-tr-[24px] lg:rounded-br-[24px] rounded-tl-none bg-gradient-to-r from-slate-100 via-slate-50 to-slate-200 "
         >
           <motion.form
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             variants={itemVariants}
             className="mx-auto mt-16 max-w-xl sm:mt-20"
           >
@@ -146,30 +148,40 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    id="first-name"
-                    name="first-name"
+                    id="firstName"
+                    {...register("firstName")}
+                    name="firstName"
                     type="text"
-                    required
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors.firstName && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.firstName.message}
+                    </p>
+                  )}
                 </div>
               </div>
               {/* Last name */}
               <div>
                 <label
-                  htmlFor="last-name"
+                  htmlFor="lastName"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Last name
                 </label>
                 <div className="mt-2.5">
                   <input
-                    id="last-name"
-                    name="last-name"
+                    id="lastName"
+                    {...register("lastName")}
+                    name="lastName"
                     type="text"
-                    required
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.lastName.message}
+                    </p>
+                  )}
                 </div>
               </div>
               {/* Company */}
@@ -183,10 +195,16 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 <div className="mt-2.5">
                   <input
                     id="company"
+                    {...register("company")}
                     name="company"
                     type="text"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors.company && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.company.message}
+                    </p>
+                  )}
                 </div>
               </div>
               {/* Email */}
@@ -200,11 +218,16 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 <div className="mt-2.5">
                   <input
                     id="email"
+                    {...register("email")}
                     name="email"
-                    required
                     type="email"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
               </div>
               {/* Phone number */}
@@ -217,16 +240,22 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 </label>
                 <div className="relative mt-2.5">
                   <div className="absolute inset-y-0 left-0 flex items-center">
-                    <label htmlFor="country" className="sr-only">
-                      Country
+                    <label htmlFor="phone" className="sr-only">
+                      Phone
                     </label>
                   </div>
                   <input
-                    id="phone-number"
-                    name="phone-number"
+                    id="phone"
+                    {...register("phone")}
+                    name="phone"
                     type="tel"
                     className="block w-full rounded-md border-0 px-3.5 py-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  {errors.phone && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.phone.message}
+                    </p>
+                  )}
                 </div>
               </div>
               {/* Message */}
@@ -240,22 +269,28 @@ const Contacts = ({ containerVariants, itemVariants }) => {
                 <div className="mt-2.5">
                   <textarea
                     id="message"
+                    {...register("message")}
                     name="message"
                     rows={6}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={""}
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-xs pt-2">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
             {/* Submit button */}
-            <div className="mt-10 mx-auto flex justify-center">
-              <button
+            <div className="w-full flex-1 mt-10 mx-auto justify-center">
+              <Button
+                variant="contactForm"
                 type="submit"
-                className="block w-full rounded-md mb-10 bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-secondary duration-200 ease-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Submit
-              </button>
+                button={isSubmitting ? "Submitting..." : "Submit"}
+                disabled={isSubmitting}
+              />
             </div>
           </motion.form>
         </motion.div>

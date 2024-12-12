@@ -25,16 +25,16 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
       ref={ref}
     >
       <motion.div
-        className="max-w-screen-xl mx-auto bg-gradient-to-r relative lg:overflow-hidden h-[600px] rounded-[24px] lg:bg-gradient-to-bl lg:from-slate-100 lg:via-slate-50 lg:to-slate-200 lg:shadow-sm flex flex-col md:flex-row items-center justify-between"
+        className="max-w-screen-xl mx-auto bg-gradient-to-r relative lg:overflow-hidden h-[620px] rounded-[24px] lg:bg-gradient-to-bl lg:from-slate-100 lg:via-slate-50 lg:to-slate-200 lg:shadow-sm flex flex-col md:flex-row items-center justify-between"
         variants={containerVariants}
         initial="hidden"
         animate={animationControls}
       >
         {/* Text and Heading Section */}
-        <div className="w-[90%] md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-start py-10 items-center">
+        <div className="w-[90%] md:w-1/2 order-1 md:order-2 h-full flex flex-col justify-start py-10 pr-6 items-center">
           <SectionHeading title="About me" subTitle="get to know me" />
           <motion.p
-            className="w-full md:w-2/3 text-center md:text-justify font-outfit font-light mt-8"
+            className="w-full text-center md:text-justify font-outfit font-light mt-8"
             variants={aboutVariant}
           >
             Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper
@@ -49,7 +49,7 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
 
         {/* Image Section */}
         <motion.div
-          className="w-full md:w-[80%] order-2 md:order-1 mt-10 md:mt-0"
+          className="w-full order-2 md:order-1 mt-10 md:mt-0"
           variants={itemVariants}
         >
           <motion.img

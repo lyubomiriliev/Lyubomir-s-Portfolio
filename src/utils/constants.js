@@ -62,7 +62,7 @@ export const educationData = [
       "HTML, CSS, SASS",
       "JavaScript, JSX, React",
       "TailwindCSS, Zustand, Firebase, Git",
-      "Unit Tests, Class Components, CRUD",
+      "Unit Tests, Class & Functional Components, CRUD",
     ],
     achievements: "Passed SoftUni React JS 2023 Course with 6.00",
   },
@@ -283,4 +283,13 @@ export const projectsData = [
     sourceCode: "https://github.com/lyubomiriliev/DISCOVERYBG-Booking-Website",
     techStack: ["JavaScript", "React", "TailwindCSS", "Figma"],
   },
+];
+
+export const headerLinks = [
+  "home",
+  "about",
+  "experience",
+  "services",
+  "projects",
+  "contact",
 ];

@@ -20,22 +20,22 @@ const ServiceCardDesign = () => {
         </div>
         <div className="text-left font-outfit font-light flex flex-col text-xl lg:text-2xl gap-4 lg:gap-[22px] w-full px-6">
           <h3>
-            <span className="font-bold">Responsive</span> & Mobile-First Design
+            <span className="font-bold ">Responsive</span> & Mobile-First Design
           </h3>
           <h3>
-            Proficient in <span className="font-bold">UX/UI design</span>
+            Proficient in <span className="font-bold ">UX/UI design</span>
           </h3>
           <h3>
-            Prototyping and <span className="font-bold">Wireframing</span>
+            <span className="font-bold ">Prototyping</span> and Wireframing
           </h3>
           <h3>
-            Visual <span className="font-bold">Consistency</span>
+            Visual <span className="font-bold ">Consistency</span>
           </h3>
           <h3>
-            <span className="font-bold">Intuitive</span> Interfaces
+            <span className="font-bold ">Intuitive</span> Interfaces
           </h3>
           <h3>
-            <span className="font-bold">Typography</span> and Color Theory
+            Color Theory and <span className="font-bold">Typography</span>
           </h3>
         </div>
         <div className="group-hover:opacity-0 transition-all duration-500 ease-in-out">

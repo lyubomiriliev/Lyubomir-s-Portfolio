@@ -94,7 +94,7 @@ const Hero = () => {
         >
           <div className="flex flex-col items-center md:items-start p-2 md:-mt-20 md:p-0 z-20">
             <motion.div variants={titleVariant} initial="hidden" animate="show">
-              <div onClick={scrolltoTop}>
+              <div className="select-none" onClick={scrolltoTop}>
                 <img
                   className="w-64 md:w-80 ml-2 mb-5"
                   src={lyuboLogo}
@@ -182,7 +182,7 @@ const Hero = () => {
       <img
         src={heroBlur}
         alt="Hero Background"
-        className="absolute top-0 left-0 -z-20 w-full h-full object-cover opacity-80"
+        className="absolute top-0 left-0 -z-20 w-full h-[70vh] lg:h-full object-cover opacity-80"
       />
       <div className="sticky">
         <TechStack />
