@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi"; // Import icons for the menu
-import { lyuboLogo } from "../assets/logos";
 
 const Header = () => {
   const [activeSession, setActiveSession] = useState("home");
