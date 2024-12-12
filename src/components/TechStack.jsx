@@ -1,4 +1,5 @@
 import { techStackLogos } from "../assets/logos";
+import { motion } from "framer-motion";
 
 const TechStack = () => {
   const filteredLogos = techStackLogos.filter(
@@ -16,7 +17,7 @@ const TechStack = () => {
             </h1>
             <div className="w-[1px] md:w-[2px] bg-white h-6 md:h-12"></div>
             {filteredLogos.map((logo, index) => (
-              <img
+              <motion.img
                 key={index}
                 className="w-5 md:w-16 rounded-md h-auto"
                 src={logo.src}

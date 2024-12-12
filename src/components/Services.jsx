@@ -58,11 +58,11 @@ const Services = ({ containerVariants, itemVariants }) => {
         className="w-full max-w-screen-xl text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-4 px-4 lg:px-20"
       >
         {softSkills.map((skill, index) => (
-          <div className="p-[2px] bg-gradient-to-r from-primary to-white rounded-[28px]">
-            <div
-              key={index}
-              className="w-full flex lg:justify-center items-center bg-gradient-to-tr from-primary/90 via-primary/60 to-primary/50 hover:bg-primary rounded-[24px] text-white px-2 py-2 gap-2 group"
-            >
+          <div
+            key={index}
+            className="p-[2px] bg-gradient-to-r from-primary to-white rounded-[28px]"
+          >
+            <div className="w-full flex lg:justify-center items-center bg-gradient-to-tr from-primary/90 via-primary/60 to-primary/50 hover:bg-primary rounded-[24px] text-white px-2 py-2 gap-2 group">
               <img
                 className="w-10 h-10 p-1 object-cover group-hover:scale-125 duration-300 ease-out"
                 src={skill.logo}

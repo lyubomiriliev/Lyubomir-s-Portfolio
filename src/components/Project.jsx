@@ -38,7 +38,7 @@ const Project = ({
             className="w-[108px] lg:w-36 select-none absolute top-28 right-2"
           />
         </div>
-        <a href={webLink} target="_blank" rel="noopener noreferrer">
+        <div>
           <ProjectBlur
             description={description}
             primaryButtonLabel={primaryButtonLabel}
@@ -48,7 +48,7 @@ const Project = ({
             webLink={webLink}
             logoSrc={logoSrc}
           />
-        </a>
+        </div>
         <div className="w-full h-32 lg:h-36 gap-2 flex flex-col px-4 lg:px-10 relative z-10">
           <h3 className="w-full font-outfit font-bold text-2xl">{title}</h3>
           <p className="font-outfit font-light text-sm tracking-widest uppercase">
@@ -79,14 +79,6 @@ const Project = ({
               </span>
             </div>
           </div>
-          {/* <div className='w-full  flex gap-6 mt-2 justify-start items-center'>
-                        <a href={webLink} target="_blank" rel="noopener noreferrer">
-                        <button className='px-6 py-2 cursor-pointer hover:bg-blue-600 duration-200 ease-in bg-primary rounded-full text-white font-medium uppercase font-outfit'>{primaryButtonLabel}</button>
-                        </a>
-                        <a href={sourceCode} target="_blank" rel="noopener noreferrer">
-                        <button className='px-4 py-1.5 cursor-pointer hover:bg-secondary duration-200 ease-in hover:text-white border-2 border-secondary bg-transparent rounded-full text-secondary font-medium uppercase font-outfit'>{secondaryButtonLabel}</button>
-                        </a>
-                    </div> */}
         </div>
       </div>
     </div>
