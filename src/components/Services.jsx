@@ -55,23 +55,21 @@ const Services = ({ containerVariants, itemVariants }) => {
         variants={itemVariants}
         initial="hidden"
         animate={animationControls}
-        className="w-full max-w-screen-xl text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-4 px-4 lg:px-20"
+        className="w-full max-w-screen-xl flex bg-secondary gap-10 rounded-xl px-4"
       >
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="p-[2px] bg-gradient-to-r from-primary to-white rounded-[28px]"
+            className="w-full flex flex-col lg:flex-row lg:justify-center items-center text-white py-4 group"
           >
-            <div className="w-full flex lg:justify-center items-center bg-gradient-to-tr from-primary/90 via-primary/60 to-primary/50 hover:bg-primary rounded-[24px] text-white px-2 py-2 gap-2 group">
-              <img
-                className="w-10 h-10 p-1 object-cover group-hover:scale-125 duration-300 ease-out"
-                src={skill.logo}
-                alt={skill.name}
-              />
-              <span className="font-outfit font-light text-xl uppercase ">
-                {skill.name}
-              </span>
-            </div>
+            <img
+              className="w-10 h-10 p-1 object-cover group-hover:scale-125 duration-300 ease-out"
+              src={skill.logo}
+              alt={skill.name}
+            />
+            <span className="font-outfit font-light text-xl uppercase ">
+              {skill.name}
+            </span>
           </div>
         ))}
       </motion.div>

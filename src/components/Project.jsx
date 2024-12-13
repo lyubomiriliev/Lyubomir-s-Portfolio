@@ -61,7 +61,7 @@ const Project = ({
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="w-10 md:w-10 object-cover rounded-md"
+                    className="w-10 md:w-10 object-cover"
                   />
                 </div>
               ))}
