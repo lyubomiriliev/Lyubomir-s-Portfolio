@@ -182,7 +182,7 @@ const Hero = () => {
       <img
         src={heroBlur}
         alt="Hero Background"
-        className="absolute top-0 left-0 -z-20 w-full h-[70vh] lg:h-full object-cover opacity-80"
+        className="absolute top-0 left-0 -z-20 w-full h-[80vh] lg:h-full object-cover opacity-80"
       />
       <div className="sticky">
         <TechStack />
