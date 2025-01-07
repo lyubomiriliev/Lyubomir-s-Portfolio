@@ -3,12 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/devIcon.svg" />
-    <link rel="preload" as="image" href="/heroBlur.png" />
-    <link rel="preload" as="image" href="assets/heroImageAnimate.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="preload" as="image" alt="BackgroundImage" href="/heroBlur.png" />
+    <link
+      rel="preload"
+      as="image"
+      alt="HeroImageAnimation"
+      href="assets/heroImageAnimate.png"
+    />
+    <meta
+      name="Lyubomir.dev"
+      content="Portfolio of Lyubomir Iliev, React Developer, showcasing projects and skills in JavaScript, React, and web development."
+    />
     <title>Lyubomir Iliev | React Developer</title>
   </head>
   <body>
+    <picture>
+      <source srcset="/heroBlur.webp" type="image/webp" />
+      <img
+        src="/heroBlur.png"
+        alt="Hero Background"
+        class="absolute top-0 left-0 -z-20 w-full h-[80vh] lg:h-full object-cover hero-image"
+      />
+    </picture>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
