@@ -6,16 +6,9 @@ import { learn } from "../assets/logos";
 import { task } from "../assets/logos";
 import {
   blackSea,
-  bsemImg,
-  discoveryImg,
   discoveryLogo,
-  hilinkImg,
-  hilinkLogo,
-  nextImg,
   nextLogo,
   popShotLogo,
-  popshotImg,
-  virtuosoImg,
   virtuosoLogoIcon,
 } from "../assets/logos";
 
@@ -135,23 +128,23 @@ export const skillsDev = [
 
 export const skillsDevAfter = [
   {
-    logo: "/web.png",
+    logo: "/web.webp",
     text: "Web Application Development",
   },
   {
-    logo: "/singlePage.png",
+    logo: "/singlePage.webp",
     text: "Single Page Applications (SPA)",
   },
   {
-    logo: "/performance.png",
+    logo: "/performance.webp",
     text: "Performance Optimization",
   },
   {
-    logo: "/interactive.png",
+    logo: "/interactive.webp",
     text: "Interactive UI Components",
   },
   {
-    logo: "/api.png",
+    logo: "/api.webp",
     text: "API Integration",
   },
 ];
@@ -165,8 +158,8 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#NextJs #TypeScript #TailwindCSS #Vercel #FramerMotion",
-    imgSrc: "/vyaradigital.png",
-    mobileImg: "/vyaraDigitalMobile.png",
+    imgSrc: "/vyaradigital.webp",
+    mobileImg: "/vyaraDigitalMobile.webp",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -189,8 +182,8 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#react #javascript #tailwindcss #firebase #i18next",
-    imgSrc: "/bsem.png",
-    mobileImg: "/bsemMobile.png",
+    imgSrc: "/bsem.webp",
+    mobileImg: "/bsemMobile.webp",
     primaryButtonLabel: "Website",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -208,8 +201,8 @@ export const projectsData = [
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies:
       "#NextJS #TypeScript #TailwindCSS #FramerMotion #Vercel #i18next",
-    imgSrc: "/virtuoso.png",
-    mobileImg: "/virtuosoMobile.png",
+    imgSrc: "/virtuoso.webp",
+    mobileImg: "/virtuosoMobile.webp",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -228,8 +221,8 @@ export const projectsData = [
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies:
       "#react #javascript #tailwindcss #vercel #redux #toastify #stripe",
-    imgSrc: "/nextshop.png",
-    mobileImg: "/nextMobile.png",
+    imgSrc: "/nextshop.webp",
+    mobileImg: "/nextMobile.webp",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -254,8 +247,8 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#react #javascript #css #sass #firebase",
-    imgSrc: "/vyaradigital.png",
-    mobileImg: "/virtuosoMobile.png",
+    imgSrc: "/vyaradigital.webp",
+    mobileImg: "/virtuosoMobile.webp",
     primaryButtonLabel: "Live Demo",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "test@gmail.com",
@@ -273,8 +266,8 @@ export const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus semper tortor mauris porta mi viverra tellus...",
     technologies: "#React #JavaScript #TailwindCSS #i18next",
-    imgSrc: "/discovery.png",
-    mobileImg: "/discoveryMobile.png",
+    imgSrc: "/discovery.webp",
+    mobileImg: "/discoveryMobile.webp",
     primaryButtonLabel: "Website",
     secondaryButtonLabel: "Source Code",
     testAccEmail: "",
