@@ -116,10 +116,11 @@ const Hero = () => {
             <div className="hidden md:block">
               <motion.p
                 variants={itemVariants}
-                className="w-3/4 md:w-full ml-2 mt-8 text-primary font-outfit font-light text-lg"
+                className="w-3/4 md:w-full ml-4 py-4 text-primary font-outfit font-light text-2xl"
               >
-                Lorem ipsum dolor sit amet consectetur. Tellus quisque lacus
-                semper tortor mauris porta.
+                I create responsive, high-performance websites with a focus on
+                sleek design, seamless functionality, and user-friendly
+                experiences.
               </motion.p>
               <motion.div
                 variants={itemVariants}
