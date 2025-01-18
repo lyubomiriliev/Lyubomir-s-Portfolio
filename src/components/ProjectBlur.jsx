@@ -5,8 +5,6 @@ const ProjectBlur = ({
   description,
   webLink,
   primaryButtonLabel,
-  secondaryButtonLabel,
-  sourceCode,
   logoSrc,
 }) => {
   return (
@@ -24,11 +22,6 @@ const ProjectBlur = ({
         <a href={webLink} target="_blank" rel="noopener noreferrer">
           <button className="px-6 py-2 cursor-pointer hover:bg-white hover:text-primary duration-200 ease-in bg-primary rounded-full text-white font-medium uppercase font-outfit">
             {primaryButtonLabel}
-          </button>
-        </a>
-        <a href={sourceCode} target="_blank" rel="noopener noreferrer">
-          <button className="px-4 py-1.5 cursor-pointer hover:bg-secondary duration-200 ease-in hover:text-white border-2 border-white hover:border-secondary bg-transparent rounded-full text-white font-medium uppercase font-outfit">
-            {secondaryButtonLabel}
           </button>
         </a>
       </div>

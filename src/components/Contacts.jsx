@@ -85,17 +85,16 @@ const Contacts = ({ containerVariants, itemVariants }) => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-4xl lg:text-6xl font-outfit text-center lg:text-left lg:leading-none max-w-sm font-bold uppercase text-secondary"
+              className="text-5xl lg:text-7xl font-outfit text-center lg:text-left lg:leading-none max-w-lg font-bold uppercase text-secondary"
             >
               Let&apos;s work together
             </motion.h3>
             <motion.p
               variants={itemVariants}
-              className="w-full font-outfit font-light"
+              className="w-full font-outfit font-light max-w-[320px]"
             >
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              Have a project or an idea in mind? I’d love to hear about it.
+              Reach out, and let’s build something awesome together!
             </motion.p>
 
             {/* CONTACT INFO */}

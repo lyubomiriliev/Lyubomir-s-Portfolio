@@ -3,10 +3,13 @@ import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import { headerLinks } from "../utils/constants";
+import { lyuboLogo } from "../assets/logos";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [activeSession, setActiveSession] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const SCROLL_DURATION = 600;
   const HEADER_OFFSET = -80;
@@ -41,14 +44,20 @@ const Header = () => {
 
   const scrollToSection = (section) => {
     setActiveSession(section);
-    setMenuOpen(false); // Close mobile menu after selecting a link
+    setMenuOpen(false); // Close mobile menu
 
-    if (section === "home") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    if (location.pathname !== "/") {
+      // If on a different page, navigate home first
+      navigate("/");
+      setTimeout(() => {
+        scroller.scrollTo(section, {
+          smooth: true,
+          duration: SCROLL_DURATION,
+          offset: HEADER_OFFSET,
+        });
+      }, 300); // Delay scrolling to ensure navigation completes
     } else {
+      // If already on home page, scroll immediately
       scroller.scrollTo(section, {
         smooth: true,
         duration: SCROLL_DURATION,
@@ -84,12 +93,13 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center justify-end w-full px-4">
+        <div className="md:hidden h-20 flex items-center justify-center backdrop-blur-md bg-white/50 w-full px-4 relative">
+          <img src={lyuboLogo} alt="Logo" className="w-64" />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-2xl text-primary z-50"
+            className="text-2xl text-primary z-50 absolute top-6 left-6"
           >
-            {menuOpen ? <FiX size={32} /> : <FiMenu size={32} />}
+            <FiMenu size={32} />
           </button>
         </div>
       </div>
@@ -102,6 +112,14 @@ const Header = () => {
           exit={{ opacity: 0, x: "-100%" }}
           className="fixed inset-0 bg-secondary backdrop-blur-sm bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white font-outfit text-2xl uppercase z-40"
         >
+          <div className="absolute top-6 left-6 z-50">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl text-white"
+            >
+              <FiX size={32} />
+            </button>
+          </div>
           {[
             "home",
             "about",
@@ -112,6 +130,7 @@ const Header = () => {
           ].map((section, index, array) => (
             <React.Fragment key={section}>
               <div
+                key={index}
                 className={`cursor-pointer ${
                   activeSession === section ? "font-bold" : ""
                 }`}

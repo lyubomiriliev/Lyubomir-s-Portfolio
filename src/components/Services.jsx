@@ -19,7 +19,7 @@ const Services = ({ containerVariants, itemVariants }) => {
   return (
     <section
       ref={ref}
-      className="w-full max-w-screen-xl 2xl:max-w-screen-2xl flex flex-col items-center justify-center mx-auto py-10"
+      className="w-full max-w-screen-xl 2xl:max-w-screen-2xl flex flex-col items-center justify-center mx-auto"
     >
       <div
         className="w-full md:w-2/3 flex flex-col justify-center items-center"
@@ -55,19 +55,19 @@ const Services = ({ containerVariants, itemVariants }) => {
         variants={itemVariants}
         initial="hidden"
         animate={animationControls}
-        className="w-full max-w-screen-xl flex bg-secondary gap-10 rounded-xl px-4"
+        className="w-full max-w-screen-lg grid grid-cols-2 lg:grid-cols-3 bg-secondary gap-2 lg:gap-10 lg:rounded-xl px-4 justify-start items-center"
       >
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="w-full flex flex-col lg:flex-row lg:justify-center items-center text-white py-4 group"
+            className="w-full flex flex-col lg:justify-center items-center text-white py-4 space-y-2 group"
           >
             <img
-              className="w-10 h-10 p-1 object-cover group-hover:scale-125 duration-300 ease-out"
+              className="w-8 h-8 object-cover group-hover:scale-125 duration-300 ease-out"
               src={skill.logo}
               alt={skill.name}
             />
-            <span className="font-outfit font-light text-xl uppercase ">
+            <span className="w-full text-center font-outfit font-light text-base lg:text-lg uppercase ">
               {skill.name}
             </span>
           </div>

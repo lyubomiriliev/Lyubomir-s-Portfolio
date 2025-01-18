@@ -50,7 +50,7 @@ const Projects = () => {
         className="w-full flex flex-col justify-center items-center mx-auto"
         ref={ref}
       >
-        <div className="w-full md:max-w-screen-xl mx-auto items-center grid md:grid-cols-2 py-10">
+        <div className="w-full md:max-w-screen-xl mx-auto items-center grid grid-cols-1 lg:grid-cols-2 py-10">
           {projectsData.map((project, index) => (
             <motion.div variants={itemVariants} key={index}>
               <Project
@@ -66,8 +66,8 @@ const Projects = () => {
                 testAccEmail={project.testAccEmail}
                 testAccPw={project.testAccPw}
                 webLink={project.webLink}
-                sourceCode={project.sourceCode}
                 techStack={project.techStack}
+                projectLink={project.url}
               />
             </motion.div>
           ))}

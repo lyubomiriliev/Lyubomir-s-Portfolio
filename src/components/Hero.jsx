@@ -84,6 +84,19 @@ const Hero = () => {
     },
   };
 
+  const imageAnimationMobile = {
+    initial: { scale: 0.5, y: 170, x: -20, opacity: 0 },
+    animate: {
+      y: -33,
+      scale: 1.2,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      }, // Smooth transition
+    },
+  };
+
   return (
     <>
       <div className="max-w-screen-xl 2xl:max-w-screen-xl mx-auto flex flex-col md:mt-20 md:flex-row items-center relative">
@@ -92,11 +105,11 @@ const Hero = () => {
           animate="show"
           variants={containerVariants}
         >
-          <div className="flex flex-col items-center md:items-start p-2 md:-mt-20 md:p-0 z-20">
+          <div className="flex flex-col items-center md:items-start py-20 lg:py-0 p-2 md:-mt-20 md:p-0 z-20">
             <motion.div variants={titleVariant} initial="hidden" animate="show">
               <div className="select-none" onClick={scrolltoTop}>
                 <img
-                  className="w-64 md:w-80 ml-2 mb-5"
+                  className="w-64 md:w-80 ml-2 mb-5 hidden lg:block"
                   src={lyuboLogo}
                   alt="Logo"
                 />
@@ -164,7 +177,15 @@ const Hero = () => {
           </div>
         </motion.div>
         <motion.img
-          className="w-full -mt-4 md:w-2/3 z-20"
+          className="w-full block -mt-8 md:w-2/3 z-20 lg:hidden"
+          src={heroImagePNG4}
+          variants={imageAnimationMobile}
+          initial="initial"
+          animate="animate"
+          alt="Hero Image"
+        />
+        <motion.img
+          className="w-full hidden lg:block -mt-8 md:w-2/3 z-20"
           src={heroImagePNG4}
           variants={imageAnimation}
           initial="initial"
@@ -172,7 +193,7 @@ const Hero = () => {
           alt="Hero Image"
         />
         <motion.img
-          className="w-full -mt-4 md:w-2/3 right-0 bottom-0 z-20 absolute"
+          className="w-full -mt-4 md:w-2/3 right-0 bottom-10 z-20 absolute"
           src={heroImageAnimate}
           initial="initial"
           animate="animate"

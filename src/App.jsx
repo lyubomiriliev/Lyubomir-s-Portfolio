@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
+import ProjectPage from "./components/ProjectPage";
 
 const Layout = () => {
   const containerVariants = {
@@ -103,6 +104,16 @@ function App() {
           element: <Layout initialSection="home" />,
         },
       ],
+    },
+    {
+      path: "/projects/:name",
+      element: (
+        <>
+          <Header />
+          <ProjectPage />
+          <Footer />
+        </>
+      ),
     },
   ]);
 

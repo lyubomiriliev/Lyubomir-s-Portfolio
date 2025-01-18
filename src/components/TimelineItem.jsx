@@ -10,7 +10,7 @@ const TimelineItem = ({
   achievements,
 }) => {
   return (
-    <div className="relative h-[320px] lg:h-[250px] flex flex-col bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
+    <div className="relative h-auto lg:h-[300px] flex flex-col bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -37,7 +37,7 @@ const TimelineItem = ({
           <h3 className="font-semibold text-lg text-gray-800">
             Skills Acquired:
           </h3>
-          <div className="w-full grid grid-cols-2 text-left gap-3">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 text-left gap-3">
             {skills &&
               skills.map((skill, index) => (
                 <span

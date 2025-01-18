@@ -1,6 +1,7 @@
 import React from "react";
 import { techStackLogos } from "../assets/logos";
 import ProjectBlur from "./ProjectBlur";
+import { Link } from "react-router-dom";
 
 const Project = ({
   logoSrc,
@@ -14,8 +15,8 @@ const Project = ({
   testAccEmail,
   testAccPw,
   webLink,
-  sourceCode,
   techStack,
+  projectLink,
 }) => {
   const filteredLogos = techStackLogos.filter((logo) =>
     techStack.includes(logo.name)
@@ -42,8 +43,6 @@ const Project = ({
           <ProjectBlur
             description={description}
             primaryButtonLabel={primaryButtonLabel}
-            secondaryButtonLabel={secondaryButtonLabel}
-            sourceCode={sourceCode}
             title={title}
             webLink={webLink}
             logoSrc={logoSrc}
@@ -66,18 +65,20 @@ const Project = ({
                 </div>
               ))}
             </div>
-            <div className="flex items-center gap-2 transition-all cursor-pointer">
-              <button className="w-8 h-8 bg-primary hover:bg-primary/80 hover:border-2 hover:border-primary rounded-full flex justify-center items-center">
-                <img
-                  src="/arrow.svg"
-                  alt="arrow"
-                  className="w-3.5 h-3.5 group-hover:rotate-[43deg] duration-300 ease-in-out"
-                />
-              </button>
-              <span className="uppercase hidden lg:block font-outfit font-light text-primary">
-                discover
-              </span>
-            </div>
+            <Link to={`/projects${projectLink}`}>
+              <div className="flex items-center gap-2 transition-all cursor-pointer">
+                <button className="w-8 h-8 bg-primary hover:bg-primary/80 hover:border-2 hover:border-primary rounded-full flex justify-center items-center">
+                  <img
+                    src="/arrow.svg"
+                    alt="arrow"
+                    className="w-3.5 h-3.5 group-hover:rotate-[43deg] duration-300 ease-in-out"
+                  />
+                </button>
+                <span className="uppercase block font-outfit font-light text-primary">
+                  Details
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
