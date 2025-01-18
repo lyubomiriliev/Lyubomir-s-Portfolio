@@ -165,7 +165,6 @@ export const projectsData = [
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
     webLink: "https://vyaradigital.vercel.app/",
-    sourceCode: "https://github.com/lyubomiriliev/Travel-App-NextJS",
     techStack: [
       "TypeScript",
       "NextJs2",
@@ -285,4 +284,71 @@ export const headerLinks = [
   "services",
   "projects",
   "contact",
+];
+
+export const projectsMoreDetails = [
+  {
+    id: 1,
+    sectionTitle: "About the Client",
+    sectionDescription:
+      "The client is an experienced Social Media Manager based in Sofia, Bulgaria, specializing in content strategy, audience engagement, and digital brand growth. With years of experience managing social media for brands across different industries, they needed a modern, professional, and visually compelling portfolio to showcase their expertise, past work, and services. The main goals for the website were:",
+    sectionGoalsTitle: "Main Goals",
+    sectionGoals: [
+      "A sleek, minimalistic design that reflects their brand identity.",
+      "A clean showcase of case studies and social media campaigns.",
+      "A contact section for business inquiries and collaborations.",
+      "A responsive and fast-loading experience across all devices.",
+    ],
+    toolsUsed: [],
+    keyFeatures: [],
+  },
+  {
+    id: 2,
+    sectionTitle: "Wireframe & Design",
+    sectionDescription:
+      "Before diving into development, I started with creating a  detailed wireframes to establish the website’s structure, navigation, and overall user experience. This phase was crucial in ensuring a logical and intuitive user flow, allowing visitors to seamlessly explore the portfolio and engage with key content.",
+    sectionGoalsTitle: "Key design choices",
+    sectionGoals: [
+      "Dark theme for a premium and sleek feel.",
+      "Typography-first layout to emphasize content without distractions.",
+      "Subtle animations to make the experience dynamic without being overwhelming.",
+      "Portfolio section featuring case studies, metrics, and campaign visuals.",
+      "Call-to-action buttons to drive engagement and inquiries.",
+    ],
+    toolsUsedTitle: "Tools Used",
+    toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
+    keyFeatures: [],
+  },
+  {
+    id: 3,
+    sectionTitle: "Development Process",
+    sectionDescription:
+      "To create a high-performing, accessible, and scalable portfolio website, I chose a modern front-end stack that balances speed, responsiveness, and maintainability. Every decision—from the framework selection to optimization techniques—was made to ensure the website not only looks great but also performs exceptionally well across all devices and screen sizes.",
+    sectionGoalsTitle: "Tech Stack",
+    sectionGoals: [
+      "NextJs + Typescript for fast and interactive UI.",
+      "Tailwind CSS for a responsive, mobile-first styling approach.",
+      "Framer Motion for smooth animations and micro-interactions.",
+      "Hosting with Vercel",
+    ],
+    toolsUsedTitle: "Key Features",
+    toolsUsed: [],
+    keyFeatures: [
+      "Interactive homepage with a hero section highlighting the client’s expertise.",
+      "Dynamic portfolio gallery to showcase past social media projects.",
+      "Smooth page transitions using Framer Motion for a high-end feel.",
+      "Fully responsive design for an optimal experience on desktop, tablet, and mobile.",
+      "SEO-optimized structure to improve discoverability.",
+    ],
+  },
+  {
+    id: 4,
+    sectionTitle: "The Finished Product",
+    sectionDescription:
+      "The result is a modern, visually compelling, and functional portfolio website that reflects the client’s personal brand and expertise in social media management. The client was thrilled with the final product, as it successfully represents their skills, experience, and credibility in the social media industry.",
+    sectionGoalsTitle: "",
+    sectionGoals: [],
+    toolsUsed: [],
+    keyFeatures: [],
+  },
 ];
