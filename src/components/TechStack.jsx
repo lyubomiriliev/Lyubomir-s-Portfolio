@@ -10,7 +10,7 @@ const TechStack = () => {
     <>
       {/* DESKTOP */}
       <div className="relative hidden md:flex">
-        <div className="w-full py-4 md:h-48 flex items-center justify-center space-x-4 md:space-y-0 md:space-x-8 bg-gradient-to-r from-secondary to-purple-900">
+        <div className="w-full py-4 md:h-48 2xl:h-56 flex items-center justify-center space-x-4 md:space-y-0 md:space-x-8 bg-gradient-to-r from-secondary to-purple-900">
           <div className="flex justify-center items-center mx-auto space-x-8">
             <h1 className="font-outfit font-bold text-sm md:text-4xl text-white">
               Tech Stack

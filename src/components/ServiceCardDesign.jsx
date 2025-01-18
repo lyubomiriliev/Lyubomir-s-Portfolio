@@ -45,7 +45,7 @@ const ServiceCardDesign = () => {
           <div className="w-full h-[1px] bg-gray-900 absolute left-0 bottom-[85px]"></div>
           <div className="w-[1px] h-full bg-gray-900 absolute right-[44px] bottom-0"></div>
           <img
-            src="/hover2.png"
+            src="/hover2.webp"
             alt="Hover Me"
             className="w-32 absolute -bottom-8 right-4"
           />

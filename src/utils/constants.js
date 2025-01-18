@@ -64,27 +64,27 @@ export const educationData = [
 export const softSkills = [
   {
     name: "Problem Solving",
-    logo: problemSolving,
+    logo: "/problemSolving.webp",
   },
   {
     name: "Attention to Detail",
-    logo: detail,
+    logo: "/detail.webp",
   },
   {
     name: "Creative Thinking",
-    logo: creative,
+    logo: "/creative.webp",
   },
   {
     name: "Team Collaboration",
-    logo: collab,
+    logo: "/collab.webp",
   },
   {
     name: "Fast & adaptive Learning",
-    logo: learn,
+    logo: "/learn.webp",
   },
   {
     name: "Task Prioritization",
-    logo: task,
+    logo: "/task.webp",
   },
 ];
 
@@ -183,7 +183,7 @@ export const projectsData = [
       "A web application providing real-time access to free EV charging stations across Bulgaria. Find, navigate, and charge effortlessly—all in one place.",
     technologies: "#react #javascript #tailwindcss #firebase #i18next",
     imgSrc: "/bsem.webp",
-    mobileImg: "/bsemMobile.webp",
+    mobileImg: "/bsemWeb.webp",
     primaryButtonLabel: "Website",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
@@ -247,15 +247,20 @@ export const projectsData = [
     description:
       "A platform for listing, showcasing, and selling cars online—quick and easy. | mobile.bg Rework",
     technologies: "#nextjs #typescript #tailwindcss #supabase #redux",
-    imgSrc: "/vyaradigital.webp",
-    mobileImg: "/virtuosoMobile.webp",
+    imgSrc: "/mobile.webp",
+    mobileImg: "/mobilePhone.webp",
     primaryButtonLabel: "Live Demo",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
     webLink: "https://pop-shot-social-media-website.web.app/",
-    sourceCode:
-      "https://github.com/lyubomiriliev/PopShot-Social-Media-SOFTUNI-2023-",
-    techStack: ["JavaScript", "React", "Css", "Sass", "Firebase", "Figma"],
+    techStack: [
+      "NextJs2",
+      "TypeScript",
+      "TailwindCSS",
+      "Redux2",
+      "Supabase",
+      "Figma",
+    ],
   },
   {
     id: 6,

@@ -119,6 +119,7 @@ export const techStackLogos = [
   { name: "Css", src: cssLogo },
   { name: "Sass", src: sassLogo },
   { name: "TailwindCSS", src: tailwindLogo },
+  { name: "Supabase", src: "/supabase.webp" },
   { name: "Firebase", src: firebaseLogo },
   { name: "Figma", src: figma },
   { name: "FramerMotion", src: framerMotion },

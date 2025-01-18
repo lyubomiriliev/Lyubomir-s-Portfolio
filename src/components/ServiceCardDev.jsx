@@ -39,7 +39,7 @@ const ServiceCardDev = ({ title, titleEnd, underTittle, closeTag }) => {
       </div>
       <div className="w-[2px] h-[78%] bg-gray-600 absolute bottom-11"></div>
       <img
-        src="/hover3.png"
+        src="/hover3.webp"
         alt="Hover Me"
         className="w-32 absolute -bottom-8 right-4"
       />

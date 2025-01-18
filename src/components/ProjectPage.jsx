@@ -24,23 +24,9 @@ const ProjectPage = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-start justify-start bg-white relative">
-      {/* 🔙 Back Button */}
-      <button
-        onClick={handleBack}
-        className="bg-primary cursor-pointer hidden hover:bg-secondary duration-300 ease-in text-white font-semibold py-2 px-4 rounded mt-6 ml-6 z-50 absolute top-16 left-0"
-      >
-        ⬅ Back
-      </button>
-
       <div className="w-full flex flex-col justify-start items-center min-h-screen max-w-screen-lg mx-auto pt-8 mt-16 px-6">
-        <div className="w-full flex flex-col gap-1 leading-loose lg:gap-4">
-          <h1
-            className={`"text-4xl text-center ${
-              project.title === "BlackSea Electromobility"
-                ? "text-primary text-4xl lg:text-7xl"
-                : "text-secondary"
-            } lg:text-7xl uppercase font-bold"`}
-          >
+        <div className="w-full flex justify-center items-center py-6 flex-col gap-1 leading-loose lg:gap-4">
+          <h1 className="text-4xl lg:text-5xl 2xl:text-7xl uppercase text-secondary text-center">
             {project.title}
           </h1>
           <h2 className="text-2xl lg:text-4xl text-center font-thin uppercase tracking-widest text-gray-500">

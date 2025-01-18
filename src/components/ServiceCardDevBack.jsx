@@ -22,7 +22,7 @@ const ServiceCardDevBack = () => {
         ))}
       </div>
       <img
-        src="/test3.png"
+        src="/test3.webp"
         alt="FrontEnd"
         className="absolute w-2/3 opacity-55 -bottom-32 left-20"
       />

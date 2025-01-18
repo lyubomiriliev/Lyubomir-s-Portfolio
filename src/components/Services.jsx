@@ -48,22 +48,22 @@ const Services = ({ containerVariants, itemVariants }) => {
           <ServiceCardDesign />
         </motion.div>
       </motion.div>
-      <h1 className="text-3xl text-secondary font-outfit font-bold py-6 uppercase">
+      <h1 className="text-4xl text-secondary font-outfit font-bold py-6 uppercase">
         Personal Skills
       </h1>
       <motion.div
         variants={itemVariants}
         initial="hidden"
         animate={animationControls}
-        className="w-full max-w-screen-lg grid grid-cols-2 lg:grid-cols-3 bg-secondary gap-2 lg:gap-10 lg:rounded-xl px-4 justify-start items-center"
+        className="w-full max-w-screen-lg grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 lg:rounded-xl px-4 justify-start items-center"
       >
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="w-full flex flex-col lg:justify-center items-center text-white py-4 space-y-2 group"
+            className="w-full flex flex-col lg:justify-center items-center text-secondary py-4 space-y-2 group"
           >
             <img
-              className="w-8 h-8 object-cover group-hover:scale-125 duration-300 ease-out"
+              className="w-14 h-14 object-cover duration-300 ease-out"
               src={skill.logo}
               alt={skill.name}
             />
