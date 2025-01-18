@@ -126,4 +126,6 @@ export const techStackLogos = [
   { name: "Redux", src: reduxLogo },
   { name: "Redux2", src: reduxLogo2 },
   { name: "Stripe", src: stripeLogo },
+  { name: "NodeJs", src: "/nodeJs.webp" },
+  { name: "Postgres", src: "/postgreSQL.webp" },
 ];

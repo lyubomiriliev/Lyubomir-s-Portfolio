@@ -17,13 +17,20 @@ const TechStack = () => {
             </h1>
             <div className="w-[1px] md:w-[2px] bg-white h-6 md:h-12"></div>
             {filteredLogos.map((logo, index) => (
-              <motion.img
+              <div
                 key={index}
-                className="w-5 md:w-16 rounded-md h-auto"
-                src={logo.src}
-                alt="techStack logo"
-                whileHover={{ scale: 1.3 }}
-              />
+                className="flex flex-col h-20 justify-end items-center space-x-2"
+              >
+                <motion.img
+                  className="w-5 md:w-16 rounded-md h-auto"
+                  src={logo.src}
+                  alt="techStack logo"
+                  whileHover={{ scale: 1.3 }}
+                />
+                <p className="text-white text-sm md:text-base whitespace-nowrap">
+                  {logo.name}
+                </p>
+              </div>
             ))}
           </div>
         </div>
