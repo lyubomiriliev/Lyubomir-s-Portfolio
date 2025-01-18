@@ -252,7 +252,7 @@ export const projectsData = [
     primaryButtonLabel: "Live Demo",
     testAccEmail: "test@gmail.com",
     testAccPw: "test123",
-    webLink: "https://pop-shot-social-media-website.web.app/",
+    webLink: "https://mobilebg.vercel.app/",
     techStack: [
       "NextJs2",
       "TypeScript",
