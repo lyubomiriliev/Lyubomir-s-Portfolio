@@ -252,7 +252,7 @@ export const projectsData = [
   },
   {
     id: 5,
-    logoSrc: popShotLogo,
+    logoSrc: "/mobileLogoWhite.svg",
     url: "/mobile-bg",
     title: "Mobile BG",
     subTitle: "Online Car Marketplace",
@@ -272,6 +272,7 @@ export const projectsData = [
       "Redux2",
       "Supabase",
       "Figma",
+      "Postgres",
     ],
   },
   {
@@ -397,7 +398,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "To create a high-performing, accessible, and scalable portfolio website, I chose a modern front-end stack that balances speed, responsiveness, and maintainability. Every decision—from the framework selection to optimization techniques—was made to ensure the website not only looks great but also performs exceptionally well across all devices and screen sizes.",
     techStackTitle: "Tech Stack",
@@ -415,7 +416,7 @@ export const detailedProjects = [
       "Fully responsive design for an optimal experience on desktop, tablet, and mobile.",
       "SEO-optimized structure to improve discoverability.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
       "The result is a modern, visually compelling, and functional portfolio website that reflects the client’s personal brand and expertise in social media management. The client was thrilled with the final product, as it successfully represents their skills, experience, and credibility in the social media industry.",
   },
@@ -445,7 +446,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "To achieve high performance, reliability, and real-time updates, I used a modern full-stack approach with a focus on API communication and authentication.",
     techStackTitle: "Tech Stack",
@@ -464,7 +465,7 @@ export const detailedProjects = [
       "Dynamic search for users to find the desired charging station.",
       "Mobile-first design for on-the-go EV drivers.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
       "The final web application is a fast, interactive, and highly informative platform for EV drivers.",
   },
@@ -496,7 +497,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "To ensure a smooth booking experience, the platform was built using high-performance Next.Js front-end, using its API endpoints and Resend for emails.",
     techStackTitle: "Tech Stack",
@@ -515,9 +516,9 @@ export const detailedProjects = [
       "SEO-optimized structure to improve discoverability.",
       "Mobile-friendly and fully responsive UI for effortless navigation.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
-      "The final website delivers a seamless, high-end experience that aligns with the brand’s premium identity.",
+      "The BlackSea Electromobility web application delivers a powerful, data-driven, and user-friendly experience that helps EV drivers in Bulgaria find charging stations with ease. Built with a real-time Google Maps API integration, the platform provides live availability updates, filtering options, and seamless navigation, ensuring that users can quickly locate and access charging stations along the Black Sea coast.",
   },
   {
     id: 4,
@@ -546,7 +547,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "To ensure scalability, speed, and security, I chose a modern front-end stack React/JavaScript with API integration and Firebase.",
     techStackTitle: "Tech Stack",
@@ -564,9 +565,9 @@ export const detailedProjects = [
       "Stripe Payment Integration for seamless transactions.",
       "Order Tracking – Users can view past purchases.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
-      "The final version of Next Apparel delivers a seamless, modern, and intuitive online shopping experience that balances both aesthetics and functionality. The clean UI, well-structured product pages, and smooth checkout flow ensure a hassle-free shopping process, making it easy for users to browse, save favorites, add items to the cart, and complete purchases securely.",
+      "The Virtuoso Barbershop website is a modern, stylish, and highly functional platform designed to elevate the client’s online presence and streamline the appointment booking process. Built with a dark, premium aesthetic, the website reflects the high-end, sophisticated branding of the barbershop while ensuring an effortless user experience.",
   },
   {
     id: 5,
@@ -594,7 +595,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "Given the scale and complexity of the application, I used a highly optimized stack.",
     techStackTitle: "Tech Stack",
@@ -613,7 +614,7 @@ export const detailedProjects = [
       "Paid & Free Listing Options for monetization",
       "Authentication & User Profiles for listing management.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
       "Mobile BG successfully transforms the car-selling process into an intuitive, highly functional, and visually appealing experience. The final product is a fully interactive online marketplace that allows users to create detailed car listings, browse available vehicles, and find the perfect match using advanced filtering options.",
   },
@@ -642,7 +643,7 @@ export const detailedProjects = [
     ],
     toolsUsedTitle: "Tools Used",
     toolsUsed: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
-    developmentTitle: "Development Process",
+    developmentTitle: "Development",
     developmentDescription:
       "To ensure fast load times and a smooth experience, I optimized both design and functionality.",
     techStackTitle: "Tech Stack",
@@ -658,7 +659,7 @@ export const detailedProjects = [
       "Google Maps integration for location browsing.",
       "Mobile-optimized design for travelers on the go.",
     ],
-    finishTitle: "The Finished Product",
+    finishTitle: "Finished Project",
     finishDescription:
       "Discovery BG is a gateway to Bulgaria’s hidden gems, offering users a visually rich and information-packed experience. The platform was designed to be simple yet effective, guiding users effortlessly through lesser-known travel destinations while providing essential details like location coordinates, historical background, and recommended activities.",
   },

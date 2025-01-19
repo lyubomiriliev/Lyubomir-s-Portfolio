@@ -35,12 +35,12 @@ const ProjectPage = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-start justify-start bg-white relative">
-      <div className="w-full flex flex-col justify-start items-center min-h-screen max-w-screen-xl mx-auto pt-8 mt-16 px-6">
-        <div className="w-full flex justify-center items-center py-6 flex-col leading-tight">
-          <h1 className="text-4xl lg:text-5xl 2xl:text-8xl uppercase text-secondary text-center">
+      <div className="w-full flex flex-col justify-start items-center min-h-screen max-w-screen-xl mx-auto pt-8 mt-16 2xl:mt-8 px-6">
+        <div className="w-full flex justify-center items-center py-4 flex-col leading-tight px-4">
+          <h1 className="text-5xl lg:text-5xl 2xl:text-7xl uppercase text-secondary text-center">
             {project.title}
           </h1>
-          <h2 className="text-2xl lg:text-4xl text-center font-thin uppercase tracking-widest text-gray-500">
+          <h2 className="text-xl lg:text-4xl text-center font-light whitespace-nowrap uppercase tracking-widest text-gray-500">
             {project.subTitle}
           </h2>
         </div>
@@ -50,7 +50,9 @@ const ProjectPage = () => {
           alt={project.title}
           className="w-2/3 rounded-2xl"
         />
-        <p className="mt-4">{project.description}</p>
+        <p className="text-md text-center lg:text-2xl lg:max-w-[1024px] uppercase">
+          {project.description}
+        </p>
         {projectDetails && (
           <ProjectPageStructure
             aboutTitle={projectDetails.aboutTitle}

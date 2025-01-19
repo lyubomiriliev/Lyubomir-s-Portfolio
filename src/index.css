@@ -23,6 +23,6 @@ html {
 
 @layer components {
   .projectHeading {
-    @apply text-3xl lg:text-5xl text-primary font-semibold uppercase;
+    @apply text-4xl text-center lg:text-5xl text-primary font-semibold uppercase;
   }
 }
