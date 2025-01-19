@@ -8,6 +8,7 @@ const TimelineItem = ({
   role,
   skills,
   achievements,
+  workExperience,
 }) => {
   return (
     <div className="relative h-auto lg:h-[300px] flex flex-col bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 w-full p-6 shadow-md rounded-[24px] lg:px-4">
@@ -23,7 +24,7 @@ const TimelineItem = ({
           clipRule="evenodd"
         />
       </svg>
-      <div className="ml-8">
+      <div className="w-full ml-8">
         <h4 className="font-bold text-primary uppercase text-xl">{title}</h4>
         <p className="text-gray-600 text-sm md:text-base font-medium">
           {location}{" "}
@@ -33,10 +34,16 @@ const TimelineItem = ({
         {achievements && (
           <p className="text-gray-700 font-semibold mt-2">{achievements}</p>
         )}
-        <div className="w-full flex flex-col mt-2 max-w-[400px]">
-          <h3 className="font-semibold text-lg text-gray-800">
-            Skills Acquired:
-          </h3>
+        <div className="w-full flex flex-col mt-2">
+          {skills.length > 0 ? (
+            <h3 className="font-semibold text-lg text-gray-800">
+              Skills Acquired:
+            </h3>
+          ) : (
+            <h3 className="font-semibold text-lg text-gray-800">
+              Description:
+            </h3>
+          )}
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 text-left gap-3">
             {skills &&
               skills.map((skill, index) => (
@@ -47,6 +54,9 @@ const TimelineItem = ({
                   {skill}
                 </span>
               ))}
+          </div>
+          <div className="w-[90%] flex">
+            <p>{workExperience}</p>
           </div>
         </div>
         <span className="mt-1 block text-lg font-semibold absolute right-4 bottom-4 text-primary">

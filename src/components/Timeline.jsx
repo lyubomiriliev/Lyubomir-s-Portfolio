@@ -31,7 +31,7 @@ const Timeline = ({ containerVariants, itemVariants }) => {
           animate={animationControls}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:mt-5 border-primary bg-white py-6"
         >
-          {educationData.map((item, index) => (
+          {educationData.slice(0, 4).map((item, index) => (
             <motion.div key={index} variants={itemVariants}>
               <TimelineItem
                 years={item.years}
@@ -41,8 +41,28 @@ const Timeline = ({ containerVariants, itemVariants }) => {
                 role={item.role}
                 skills={item.skills || item.skillsLearned}
                 achievements={item.achievements}
+                workExperience={item.workExperience}
               />
             </motion.div>
+          ))}
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate={animationControls}
+          className="w-full flex border-primary bg-white "
+        >
+          {educationData.slice(4, 5).map((item, index) => (
+            <TimelineItem
+              years={item.years}
+              title={item.name}
+              location={item.location}
+              level={item.level}
+              role={item.role}
+              skills={item.skills || item.skillsLearned}
+              achievements={item.achievements}
+              workExperience={item.workExperience}
+            />
           ))}
         </motion.div>
       </div>

@@ -23,6 +23,7 @@ export const educationData = [
       "Cinematography and photography",
       "Basic technical education",
     ],
+    workExperience: "",
   },
   {
     name: "Graphic Designer, New Bulgarian University",
@@ -37,19 +38,21 @@ export const educationData = [
       "UI/UX design",
       "Creativity",
     ],
+    workExperience: "",
   },
   {
     name: "Design - Freelancer",
-    years: "(2017-2023)",
+    years: "(2018-2023)",
     role: "Graphic Designer | UX/UI",
     skills: [
       "Design logotypes, web pages, banners, flyers, billboards, social media content, menus, woblers and more",
       "Design brand identity for various Bulgarian companies El Shisha, Vapy, Fitty, Coolfit",
     ],
+    workExperience: "",
   },
   {
     name: "Soft Uni Advanced React Course",
-    years: "(2022-2024)",
+    years: "(2023-2024)",
     role: "Front-End React Developer",
     skillsLearned: [
       "HTML, CSS, SASS",
@@ -57,7 +60,16 @@ export const educationData = [
       "TailwindCSS, Zustand, Firebase, Git",
       "Unit Tests, Class & Functional Components, CRUD, API requests",
     ],
+    workExperience: "",
     achievements: "Passed SoftUni React JS 2023 Course with 6.00",
+  },
+  {
+    name: "IT Communication & Dissemination Manager, UBBSLA",
+    years: "(2023-Present)",
+    role: "Front-End | React Developer",
+    skillsLearned: [],
+    workExperience:
+      "Developed websites and web applications using React, JavaScript, and TypeScript to optimize performance and ensure cross-device compatibility. Integrated APIs to facilitate proper communication between front-end and back-end systems. Debugged code, improved UI/UX, and maintained clean and scalable code for efficient project delivery.",
   },
 ];
 
