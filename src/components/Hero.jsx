@@ -131,9 +131,7 @@ const Hero = () => {
                 variants={itemVariants}
                 className="w-3/4 md:w-full ml-4 py-4 text-primary font-outfit font-light text-2xl"
               >
-                I create responsive, high-performance websites with a focus on
-                sleek design, seamless functionality, and user-friendly
-                experiences.
+                Highly motivated, hard working, organized and reliable.
               </motion.p>
               <motion.div
                 variants={itemVariants}

@@ -37,14 +37,14 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
             className="w-full text-center md:text-justify font-outfit lg:text-xl font-light mt-8"
             variants={aboutVariant}
           >
-            Hey there, I’m Lyubomir Iliev! Bringing ideas to life through unique
-            projects is what drives me. There’s something satisfying about clean
-            design, smooth functionality, and the all little details that make
-            everything unique. With a background in UI/UX, I’m all about
-            creating websites that feel intuitive and effortless to use. When
-            I’m not coding, you’ll probably find me exploring new trends, night
-            drive in my car to relax, or just enjoying the things that make life
-            exciting.
+            Hey there, I’m Lyubomir Iliev! I'am a Front-End Developer
+            specializing in ReactJs/NodeJs. My background as a Graphic and UX/UI
+            designer helps me a lot to make clean designs, smooth functionality,
+            and all the little details that make everything unique. I’m all
+            about creating websites that feel intuitive and effortless to use.
+            When I’m not coding, you’ll probably find me exploring new trends,
+            night drive in my car to relax, or just enjoying the things that
+            make life exciting.
           </motion.p>
         </div>
 

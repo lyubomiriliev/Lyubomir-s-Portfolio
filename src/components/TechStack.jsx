@@ -9,27 +9,21 @@ const TechStack = () => {
   return (
     <>
       {/* DESKTOP */}
-      <div className="relative hidden md:flex">
+      <div className="w-full flex-col justify-center hidden md:flex">
         <div className="w-full py-4 md:h-48 2xl:h-56 flex items-center justify-center space-x-4 md:space-y-0 md:space-x-8 bg-gradient-to-r from-secondary to-purple-900">
-          <div className="flex justify-center items-center mx-auto space-x-8">
-            <h1 className="font-outfit font-bold text-sm md:text-4xl text-white">
+          <div className="flex justify-center items-center mx-auto space-x-8 px-10">
+            <h1 className="font-outfit whitespace-nowrap font-bold text-xl md:text-4xl text-white">
               Tech Stack
             </h1>
             <div className="w-[1px] md:w-[2px] bg-white h-6 md:h-12"></div>
             {filteredLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex flex-col h-20 justify-end items-center space-x-2"
-              >
+              <div key={index} className="flex flex-col items-center">
                 <motion.img
                   className="w-5 md:w-16 rounded-md h-auto"
                   src={logo.src}
                   alt="techStack logo"
                   whileHover={{ scale: 1.3 }}
                 />
-                <p className="text-white text-sm md:text-base whitespace-nowrap">
-                  {logo.name}
-                </p>
               </div>
             ))}
           </div>
