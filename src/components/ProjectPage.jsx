@@ -1,12 +1,23 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { projectsData, projectsMoreDetails } from "../utils/constants";
+import { detailedProjects, projectsData } from "../utils/constants";
 import ProjectPageStructure from "./ProjectPageStructure";
 
 const ProjectPage = () => {
   const { name } = useParams();
   const project = projectsData.find((p) => p.url === `/${name}`);
+  const projectDetails = detailedProjects.find(
+    (p) => p.name === project?.title
+  );
   const navigate = useNavigate();
+
+  console.log(projectDetails);
+
+  console.log("Project Title:", project?.title);
+  console.log(
+    "Available Detailed Projects:",
+    detailedProjects.map((p) => p.name)
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,19 +51,28 @@ const ProjectPage = () => {
           className="w-2/3 rounded-2xl"
         />
         <p className="mt-4">{project.description}</p>
-        {projectsMoreDetails.map((proj, id) => (
-          <div key={id}>
-            <ProjectPageStructure
-              sectionTitle={proj.sectionTitle}
-              sectionDescription={proj.sectionDescription}
-              sectionGoalsTitle={proj.sectionGoalsTitle}
-              sectionGoals={proj.sectionGoals}
-              toolsUsedTitle={proj.toolsUsedTitle}
-              toolsUsed={proj.toolsUsed}
-              keyFeatures={proj.keyFeatures}
-            />
-          </div>
-        ))}
+        {projectDetails && (
+          <ProjectPageStructure
+            aboutTitle={projectDetails.aboutTitle}
+            aboutDescription={projectDetails.aboutDescription}
+            aboutGoalsTitle={projectDetails.aboutGoalsTitle}
+            aboutGoals={projectDetails.aboutGoals}
+            designTitle={projectDetails.designTitle}
+            designDescription={projectDetails.designDescription}
+            designGoalsTitle={projectDetails.designGoalsTitle}
+            designGoals={projectDetails.designGoals}
+            toolsUsedTitle={projectDetails.toolsUsedTitle}
+            toolsUsed={projectDetails.toolsUsed}
+            developmentTitle={projectDetails.developmentTitle}
+            developmentDescription={projectDetails.developmentDescription}
+            techStackTitle={projectDetails.techStackTitle}
+            techStack={projectDetails.techStack}
+            keyFeaturesTitle={projectDetails.keyFeaturesTitle}
+            keyFeatures={projectDetails.keyFeatures}
+            finishTitle={projectDetails.finishTitle}
+            finishDescription={projectDetails.finishDescription}
+          />
+        )}
         <div className="flex items-center gap-2 mt-6">
           <div>
             <button

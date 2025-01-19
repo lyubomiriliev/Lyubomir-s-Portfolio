@@ -11,7 +11,6 @@ const Project = ({
   imgSrc,
   mobileImg,
   primaryButtonLabel,
-  secondaryButtonLabel,
   testAccEmail,
   testAccPw,
   webLink,
