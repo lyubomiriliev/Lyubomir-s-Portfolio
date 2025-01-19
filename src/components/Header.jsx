@@ -94,7 +94,12 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden h-20 flex items-center justify-center backdrop-blur-md bg-white/50 w-full px-4 relative">
-          <img src={lyuboLogo} alt="Logo" className="w-64" />
+          <img
+            onClick={() => scrollToSection}
+            src={lyuboLogo}
+            alt="Logo"
+            className="w-64"
+          />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-2xl text-primary z-50 absolute top-6 left-6"

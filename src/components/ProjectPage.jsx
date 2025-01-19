@@ -11,14 +11,6 @@ const ProjectPage = () => {
   );
   const navigate = useNavigate();
 
-  console.log(projectDetails);
-
-  console.log("Project Title:", project?.title);
-  console.log(
-    "Available Detailed Projects:",
-    detailedProjects.map((p) => p.name)
-  );
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

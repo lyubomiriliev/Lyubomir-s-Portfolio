@@ -54,6 +54,7 @@ const Timeline = ({ containerVariants, itemVariants }) => {
         >
           {educationData.slice(4, 5).map((item, index) => (
             <TimelineItem
+              key={index}
               years={item.years}
               title={item.name}
               location={item.location}
