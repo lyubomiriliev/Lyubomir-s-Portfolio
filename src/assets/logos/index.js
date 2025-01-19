@@ -4,7 +4,7 @@ import heroTitlePNG from "../logos/heroTitlePNG.webp";
 import heroImagePNG from "../logos/heroImagePNG.webp";
 import heroImagePNG2 from "../logos/heroImagePNG2.webp";
 import heroImagePNG3 from "../logos/heroImagePNG3.webp";
-import heroImagePNG4 from "../logos/heroImagePNG4.webp";
+import heroImagePNG4 from "../logos/heroImagePNG6.webp";
 import heroImage from "../logos/portfolio1.svg";
 import linkedinSecondary from "../logos/linkedinpurple.webp";
 import githubSecondary from "../logos/github.webp";
