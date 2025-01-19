@@ -42,9 +42,8 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
             designer helps me a lot to make clean designs, smooth functionality,
             and all the little details that make everything unique. I’m all
             about creating websites that feel intuitive and effortless to use.
-            When I’m not coding, you’ll probably find me exploring new trends,
-            night drive in my car to relax, or just enjoying the things that
-            make life exciting.
+            When I’m not coding, I’m either at the gym, maybe a chill night
+            drive in my car, or just enjoying life’s simple pleasures.
           </motion.p>
         </div>
 
