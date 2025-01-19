@@ -23,11 +23,11 @@ const ProjectPageStructure = ({
   return (
     <section className="w-full flex flex-col justify-start mt-8">
       <div className="w-full flex flex-col justify-start items-start relative">
-        <div className="w-full flex items-center py-4">
+        <div className="w-full flex items-center pb-3 pt-5">
           <h1 className="projectHeading">{aboutTitle}</h1>
         </div>
         <div className="w-full">
-          <div className="w-full lg:w-2/4 text-md py-6">
+          <div className="w-full lg:w-2/4 text-md pb-6">
             <p>{aboutDescription}</p>
           </div>
           <img
@@ -36,14 +36,14 @@ const ProjectPageStructure = ({
             className="flex lg:hidden w-full opacity-75"
           />
           <div className="w-full lg:w-2/3">
-            <h1 className="text-xl lg:text-2xl uppercase font-bold text-secondary pb-2">
+            <h1 className="text-2xl lg:text-3xl uppercase font-bold text-secondary py-4">
               {aboutGoalsTitle}
             </h1>
             <div className="grid grid-cols-1 gap-2 pb-8">
               {aboutGoals.map((goal, index) => (
-                <div key={index}>
-                  <h3 className="text-gray-700 font-light">{goal}</h3>
-                </div>
+                <ul className="list-disc px-6" key={index}>
+                  <li className="text-gray-700 text-lg">{goal}</li>
+                </ul>
               ))}
             </div>
           </div>
@@ -51,14 +51,14 @@ const ProjectPageStructure = ({
         <img
           src="/projectPage/about.png"
           alt="About Client"
-          className="hidden lg:block absolute -top-4 right-20 w-[42%]"
+          className="hidden lg:block opacity-75 absolute top-0 right-20 w-[35%]"
         />
       </div>
       <div className="w-full flex flex-col justify-start items-start relative">
-        <div className="w-full flex items-center py-4">
+        <div className="w-full flex items-center pb-3 pt-5">
           <h1 className="projectHeading">{designTitle}</h1>
         </div>
-        <div className="w-full lg:w-2/4 text-md py-6">
+        <div className="w-full lg:w-2/4 text-md pb-6">
           <p>{designDescription}</p>
         </div>
         <img
@@ -72,9 +72,9 @@ const ProjectPageStructure = ({
           </h1>
           <div className="grid grid-cols-1 gap-2 pb-8">
             {designGoals.map((goal, index) => (
-              <div key={index}>
-                <h3 className="text-gray-700 font-light">{goal}</h3>
-              </div>
+              <ul className="list-disc px-6" key={index}>
+                <li className="text-gray-700 text-lg">{goal}</li>
+              </ul>
             ))}
           </div>
         </div>
@@ -84,16 +84,16 @@ const ProjectPageStructure = ({
           </h1>
           <div className="grid grid-cols-1 gap-2 pb-8">
             {toolsUsed.map((tool, index) => (
-              <div key={index}>
-                <h3 className="text-gray-700 text-lg font-light">{tool}</h3>
-              </div>
+              <ul className="list-disc px-6" key={index}>
+                <li className="text-gray-700 text-lg">{tool}</li>
+              </ul>
             ))}
           </div>
         </div>
         <img
           src="/projectPage/wireframe.png"
           alt="DesignWireframe"
-          className="hidden lg:block absolute top-24 right-20 w-[42%]"
+          className="hidden lg:block opacity-75 absolute top-24 right-20 w-[35%]"
         />
       </div>
       <div className="w-full flex flex-col justify-start items-start relative">
@@ -114,9 +114,9 @@ const ProjectPageStructure = ({
           </h1>
           <div className="grid grid-cols-1 gap-2 pb-8">
             {techStack.map((tool, index) => (
-              <div key={index}>
-                <h3 className="text-gray-700 text-lg font-light">{tool}</h3>
-              </div>
+              <ul className="list-disc px-6" key={index}>
+                <li className="text-gray-700 text-lg">{tool}</li>
+              </ul>
             ))}
           </div>
           <h1 className="text-xl lg:text-2xl uppercase font-bold pb-2">
@@ -124,16 +124,16 @@ const ProjectPageStructure = ({
           </h1>
           <div className="grid grid-cols-1 gap-2 pb-8">
             {keyFeatures.map((tool, index) => (
-              <div key={index}>
-                <h3 className="text-gray-700 text-lg font-light">{tool}</h3>
-              </div>
+              <ul className="list-disc px-6" key={index}>
+                <li className="text-gray-700 text-lg">{tool}</li>
+              </ul>
             ))}
           </div>
         </div>
         <img
           src="/projectPage/development.png"
           alt="Development"
-          className="hidden lg:block absolute top-10 right-20 w-[42%]"
+          className="hidden lg:block opacity-75 absolute top-10 right-20 w-[35%]"
         />
       </div>
       <div className="w-full flex flex-col justify-start items-start relative">
@@ -151,7 +151,7 @@ const ProjectPageStructure = ({
         <img
           src="/projectPage/finished.png"
           alt="FinishedProduct"
-          className="hidden lg:block absolute -top-32 right-20 w-[42%]"
+          className="hidden lg:block opacity-75 absolute -top-32 right-20 w-[35%]"
         />
       </div>
     </section>

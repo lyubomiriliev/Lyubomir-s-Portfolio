@@ -467,7 +467,7 @@ export const detailedProjects = [
     ],
     finishTitle: "Finished Project",
     finishDescription:
-      "The final web application is a fast, interactive, and highly informative platform for EV drivers.",
+      "The BlackSea Electromobility web application delivers a powerful, data-driven, and user-friendly experience that helps EV drivers in Bulgaria find charging stations with ease. Built with a real-time Google Maps API integration, the platform provides live availability updates, filtering options, and seamless navigation, ensuring that users can quickly locate and access charging stations along the Black Sea coast.",
   },
   {
     id: 3,
