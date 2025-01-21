@@ -3,6 +3,7 @@ import {
   githubSecondary,
   heroBlur,
   heroImageAnimate,
+  heroImagePNG2,
   heroImagePNG4,
   linkedinSecondary,
   lyuboLogo,
@@ -175,7 +176,7 @@ const Hero = () => {
           </div>
         </motion.div>
         <motion.img
-          className="w-full block -mt-8 md:w-2/3 z-20 lg:hidden"
+          className="w-full block ml-10 -mt-8 md:w-2/3 z-20 lg:hidden"
           src={heroImagePNG4}
           variants={imageAnimationMobile}
           initial="initial"
