@@ -35,6 +35,7 @@ const Layout = () => {
 
   return (
     <div>
+      <Analytics />
       <div id="home"></div>
       <Header />
       <div>
@@ -75,7 +76,6 @@ const Layout = () => {
 };
 
 function App() {
-  <Analytics />;
   const router = createBrowserRouter([
     {
       path: "/",
