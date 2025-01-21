@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
 import ProjectPage from "./components/ProjectPage";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = () => {
   const containerVariants = {
@@ -74,6 +75,7 @@ const Layout = () => {
 };
 
 function App() {
+  <Analytics />;
   const router = createBrowserRouter([
     {
       path: "/",
