@@ -518,7 +518,7 @@ export const detailedProjects = [
     ],
     finishTitle: "Finished Project",
     finishDescription:
-      "The BlackSea Electromobility web application delivers a powerful, data-driven, and user-friendly experience that helps EV drivers in Bulgaria find charging stations with ease. Built with a real-time Google Maps API integration, the platform provides live availability updates, filtering options, and seamless navigation, ensuring that users can quickly locate and access charging stations along the Black Sea coast.",
+      "The Virtuoso Barbershop website is a modern, stylish, and highly functional platform designed to elevate the client’s online presence and streamline the appointment booking process. Built with a dark, premium aesthetic, the website reflects the high-end, sophisticated branding of the barbershop while ensuring an effortless user experience.",
   },
   {
     id: 4,
@@ -567,7 +567,7 @@ export const detailedProjects = [
     ],
     finishTitle: "Finished Project",
     finishDescription:
-      "The Virtuoso Barbershop website is a modern, stylish, and highly functional platform designed to elevate the client’s online presence and streamline the appointment booking process. Built with a dark, premium aesthetic, the website reflects the high-end, sophisticated branding of the barbershop while ensuring an effortless user experience.",
+      "The final version of Next Apparel delivers a seamless, modern, and intuitive online shopping experience that balances both aesthetics and functionality. The clean UI, well-structured product pages, and smooth checkout flow ensure a hassle-free shopping process, making it easy for users to browse, save favorites, add items to the cart, and complete purchases securely.",
   },
   {
     id: 5,
