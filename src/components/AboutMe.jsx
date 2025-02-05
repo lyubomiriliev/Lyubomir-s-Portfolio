@@ -97,7 +97,7 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
           variants={itemVariants}
         >
           <motion.img
-            className="object-cover hidden lg:block w-full absolute left-0 lg:-left-24 -bottom-4 lg:-bottom-80"
+            className="object-cover hidden lg:block w-full absolute left-0 lg:-left-10 -bottom-4 lg:-bottom-[330px]"
             src={aboutImage}
             alt="about image"
           />
