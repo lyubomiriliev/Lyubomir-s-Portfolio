@@ -34,7 +34,7 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
         <div className="w-[90%] md:w-full order-1 md:order-2 h-full flex flex-col justify-start pt-10 lg:py-10 pr-6 items-center">
           <SectionHeading title="About me" subTitle="get to know me" />
           <motion.p
-            className="w-full text-base lg:text-center md:text-justify font-outfit lg:text-md font-light mt-4"
+            className="w-full text-base lg:text-right md:text-justify font-outfit lg:text-md font-light mt-4"
             variants={aboutVariant}
           >
             I'm a junior front-end developer with nearly two years of work
