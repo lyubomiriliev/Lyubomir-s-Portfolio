@@ -22,16 +22,36 @@ const Timeline = ({ containerVariants, itemVariants }) => {
     >
       <div animate={animationControls}>
         <SectionHeading
-          title="Education & Experience"
+          title="Experience & Education"
           subTitle="Journey Roadmap"
         />
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate={animationControls}
+          className="w-full flex border-primary mt-8 bg-white "
+        >
+          {educationData.slice(0, 1).map((item, index) => (
+            <TimelineItem
+              key={index}
+              years={item.years}
+              title={item.name}
+              location={item.location}
+              level={item.level}
+              role={item.role}
+              skills={item.skills || item.skillsLearned}
+              achievements={item.achievements}
+              workExperience={item.workExperience}
+            />
+          ))}
+        </motion.div>
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={animationControls}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:mt-5 border-primary bg-white py-6"
         >
-          {educationData.slice(0, 4).map((item, index) => (
+          {educationData.slice(1, 5).map((item, index) => (
             <motion.div key={index} variants={itemVariants}>
               <TimelineItem
                 years={item.years}
@@ -44,26 +64,6 @@ const Timeline = ({ containerVariants, itemVariants }) => {
                 workExperience={item.workExperience}
               />
             </motion.div>
-          ))}
-        </motion.div>
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate={animationControls}
-          className="w-full flex border-primary bg-white "
-        >
-          {educationData.slice(4, 5).map((item, index) => (
-            <TimelineItem
-              key={index}
-              years={item.years}
-              title={item.name}
-              location={item.location}
-              level={item.level}
-              role={item.role}
-              skills={item.skills || item.skillsLearned}
-              achievements={item.achievements}
-              workExperience={item.workExperience}
-            />
           ))}
         </motion.div>
       </div>
