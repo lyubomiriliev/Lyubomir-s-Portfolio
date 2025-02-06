@@ -58,10 +58,12 @@ const AboutMe = ({ containerVariants, itemVariants }) => {
             <span className="font-medium">CI/CD pipeline</span>.
             <br />
             <br />I have base knowledge of the differences between Git Flow and
-            trunk based development. Frequently in my work I use{" "}
+            trunk based development. I understand{" "}
             <span className="font-medium">Agile Manifesto and Scrum </span>
-            methodologies, using <span className="font-medium">Jira</span> for
-            ticket management and{" "}
+            methodologies. I have used <span className="font-medium">
+              Jira
+            </span>{" "}
+            for ticket management and{" "}
             <span className="font-medium">Confluence</span> for documentation.
             <br />
             <br />
