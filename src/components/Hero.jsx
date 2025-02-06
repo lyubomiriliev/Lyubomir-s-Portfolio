@@ -15,8 +15,8 @@ import TechStack from "./TechStack";
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/lyubomir-iliev-resume.pdf";
-    link.download = "lyubomir-iliev-resume.pdf";
+    link.href = "/lyubomir-iliev-resume2025.pdf";
+    link.download = "lyubomir-iliev-resume2025.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
