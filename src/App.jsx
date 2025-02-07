@@ -5,11 +5,17 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import Services from "./components/Services";
 import Timeline from "./components/Timeline";
 import ProjectPage from "./components/ProjectPage";
 import { Analytics } from "@vercel/analytics/react";
+import { useEffect } from "react";
+import { scroller } from "react-scroll";
 
 const Layout = () => {
   const containerVariants = {
@@ -32,6 +38,19 @@ const Layout = () => {
       transition: { duration: 1, ease: "easeOut" },
     },
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash) {
+      scroller.scrollTo(hash, {
+        smooth: true,
+        duration: 600,
+        offset: -80,
+      });
+    }
+  }, [location]);
 
   return (
     <div>

@@ -58,6 +58,7 @@ const Header = () => {
       }, 300); // Delay scrolling to ensure navigation completes
     } else {
       // If already on home page, scroll immediately
+      window.history.pushState(null, "", `#${section}`);
       scroller.scrollTo(section, {
         smooth: true,
         duration: SCROLL_DURATION,
